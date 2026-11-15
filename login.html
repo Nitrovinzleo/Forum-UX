@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Connexion et inscription sur K-Pop Discussion Hub Édition Studio.">
+  <meta name="theme-color" content="#140810">
+  <title>Connexion &amp; Inscription | K-Pop Discussion Hub</title>
+  <link rel="stylesheet" href="studio.css?v=20261121l">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23140810'/%3E%3Cpath d='M16 7v18M7 16h18' stroke='%23FF2D78' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au formulaire de connexion</a>
+
+  <!-- Barre supérieure Studio -->
+  <div class="st-topbar" role="region" aria-label="Édition et accessibilité">
+    <div class="st-container st-topbar-inner">
+      <div class="st-issue-meta">
+        <span class="st-issue-pill">ÉDITION STUDIO</span>
+        <span>N° 04</span>
+        <span>RGAA 4.1.2 / WCAG AAA</span>
+      </div>
+      <div class="st-topbar-actions">
+        <button type="button" id="btn-text-size" class="st-a11y-btn" aria-pressed="false" aria-label="Agrandir le texte à 125%">
+          <span aria-hidden="true">A+</span>
+          <span>Texte</span>
+        </button>
+        <button type="button" id="btn-high-contrast" class="st-a11y-btn" aria-pressed="false" aria-label="Activer le contraste élevé">
+          <span aria-hidden="true">◐</span>
+          <span>Contraste</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Masthead Studio sticky -->
+  <header class="st-header" role="banner">
+    <div class="st-container st-header-inner">
+      <a href="index.html" class="st-masthead" aria-label="K-Pop Discussion Hub">
+        <span class="st-masthead-wordmark">K-POP HUB</span>
+        <span class="st-masthead-edition">/ SEOUL EDITION</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul class="st-nav-list" role="list">
+          <li><a href="index.html" class="st-nav-link">Accueil</a></li>
+          <li><a href="index.html#debats-live" class="st-nav-link">Débats live</a></li>
+          <li><a href="index.html#lookbook" class="st-nav-link">Groupes</a></li>
+          <li><a href="forum.html" class="st-nav-link">Forum</a></li>
+          <li id="nav-user-item"><a href="login.html" id="nav-login-link" class="st-nav-link st-nav-cta" aria-current="page">Connexion</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <div class="st-container">
+      <div class="st-auth-grid">
+
+        <!-- Colonne gauche : Panneau éditorial sombre -->
+        <section class="st-auth-panel" aria-labelledby="auth-h1">
+          <span class="st-tag st-tag-gold">Espace Membre</span>
+          <h1 id="auth-h1" class="st-page-h1" style="margin-top: 1rem;">
+            Rejoignez la communauté K-Pop Hub.
+          </h1>
+          <p class="st-page-lead">
+            Un compte unique pour voter sur K/DA, commenter Keria en direct et sauvegarder vos groupes favoris.
+          </p>
+
+          <ul class="st-auth-list" role="list">
+            <li>
+              <span class="st-auth-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Débats en direct</strong>
+                <span style="color: var(--st-on-dark-muted); font-size: 0.875rem;">Prenez parti sur les tendances K-Pop et esport.</span>
+              </div>
+            </li>
+            <li>
+              <span class="st-auth-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+              </span>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Favoris &amp; groupes suivis</strong>
+                <span style="color: var(--st-on-dark-muted); font-size: 0.875rem;">Synchronisés avec votre tableau de bord membre.</span>
+              </div>
+            </li>
+            <li>
+              <span class="st-auth-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Accessibilité persistante</strong>
+                <span style="color: var(--st-on-dark-muted); font-size: 0.875rem;">Vos réglages RGAA suivent chaque page du site.</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Colonne droite : Carte Connexion / Inscription + Bobi -->
+        <div class="st-card">
+          <div class="st-bobi-peek">
+            <button type="button" class="st-bobi-btn kpop-mascot-trigger" data-mascot-quote="Crée ton compte en 10 secondes ou teste le profil Min-ji en un clic !" data-mascot-title="Bobi" data-mascot-placement="bottom" aria-label="Bobi la mascotte complice">
+              <img src="assets/images/mascot/mascot-wink.png?v=20261111h" alt="Bobi la mascotte complice" class="st-bobi-img">
+            </button>
+          </div>
+
+          <div class="auth-tabs" role="tablist" aria-label="Mode d'accès au compte">
+            <button type="button" role="tab" id="tab-login" class="auth-tab-btn" aria-selected="true" aria-controls="panel-login">Se connecter</button>
+            <button type="button" role="tab" id="tab-register" class="auth-tab-btn" aria-selected="false" aria-controls="panel-register">Créer un compte</button>
+          </div>
+
+          <div id="login-feedback-alert" class="feedback-alert" hidden aria-atomic="true"></div>
+
+          <!-- PANNEAU CONNEXION -->
+          <div id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+            <div style="padding: 1rem; border-radius: var(--st-radius-sm); background-color: var(--st-paper); border: 1px solid var(--st-line); margin-bottom: 1.35rem;">
+              <p style="margin: 0 0 0.6rem 0; font-size: 0.85rem; font-weight: 700; color: var(--st-ink-muted);">Accès rapide de démonstration</p>
+              <button type="button" id="btn-quick-demo-login" class="st-btn st-btn-ghost" style="width: 100%;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span>Connexion 1-Clic (Min-ji Park)</span>
+              </button>
+            </div>
+
+            <form id="login-form" novalidate>
+              <div class="form-group">
+                <label for="input-login-id" class="form-label">Identifiant ou e-mail</label>
+                <input type="text" id="input-login-id" name="loginId" class="form-input" placeholder="minji.park@kpop-hub.fr" autocomplete="username" required aria-required="true" aria-describedby="login-id-error">
+                <div id="login-id-error" class="field-error" hidden></div>
+              </div>
+
+              <div class="form-group">
+                <label for="input-login-pwd" class="form-label">Mot de passe</label>
+                <div class="input-password-wrapper">
+                  <input type="password" id="input-login-pwd" name="password" class="form-input" placeholder="Votre mot de passe" autocomplete="current-password" required aria-required="true" aria-describedby="login-pwd-error">
+                  <button type="button" id="btn-toggle-pwd" class="btn-toggle-password" aria-pressed="false" aria-label="Afficher le mot de passe">Afficher</button>
+                </div>
+                <div id="login-pwd-error" class="field-error" hidden></div>
+              </div>
+
+              <div class="form-group">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="input-remember-me" class="form-checkbox" checked>
+                  <label for="input-remember-me" style="font-size: 0.9rem; font-weight: 600;">Rester connecté sur cet appareil</label>
+                </div>
+              </div>
+
+              <button type="submit" class="st-btn st-btn-primary" style="width: 100%;">Se connecter</button>
+            </form>
+          </div>
+
+          <!-- PANNEAU INSCRIPTION -->
+          <div id="panel-register" role="tabpanel" aria-labelledby="tab-register" hidden>
+            <form id="register-form" novalidate>
+              <div class="form-group">
+                <label for="input-reg-name" class="form-label">Pseudo public</label>
+                <input type="text" id="input-reg-name" name="displayName" class="form-input" placeholder="ex: Hana_Seoul" required aria-required="true">
+              </div>
+
+              <div class="form-group">
+                <label for="input-reg-email" class="form-label">Adresse e-mail</label>
+                <input type="email" id="input-reg-email" name="email" class="form-input" placeholder="hana@exemple.fr" autocomplete="email" required aria-required="true">
+              </div>
+
+              <div class="form-group">
+                <label for="input-reg-bias" class="form-label">Groupe favori (Bias)</label>
+                <select id="input-reg-bias" name="bias" class="sort-select" style="width: 100%;">
+                  <option value="NewJeans">NewJeans (4G / 5G)</option>
+                  <option value="BLACKPINK">BLACKPINK (3G)</option>
+                  <option value="BTS">BTS (3G)</option>
+                  <option value="Stray Kids">Stray Kids (4G)</option>
+                  <option value="TWICE">TWICE (3G)</option>
+                  <option value="K/DA">K/DA (Virtuel)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="input-reg-pwd" class="form-label">Mot de passe (8 caractères min.)</label>
+                <input type="password" id="input-reg-pwd" name="password" class="form-input" placeholder="Choisissez un mot de passe solide" autocomplete="new-password" required aria-required="true">
+                <div class="pwd-strength-meter" aria-live="polite">
+                  <div class="pwd-strength-track">
+                    <div id="pwd-strength-fill" class="pwd-strength-fill"></div>
+                  </div>
+                  <span id="pwd-strength-label" class="pwd-strength-label">Vide</span>
+                </div>
+              </div>
+
+              <button type="submit" class="st-btn st-btn-primary" style="width: 100%;">Créer mon compte membre</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div id="sr-announcements" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="st-footer" role="contentinfo">
+    <div class="st-container">
+      <div class="st-footer-grid">
+        <div>
+          <strong style="font-family: var(--font-display); font-size: 1.25rem; letter-spacing: -0.03em;">K-POP HUB / SEOUL EDITION</strong>
+          <p style="color: var(--st-on-dark-muted); font-size: 0.9rem; max-width: 42ch; margin-top: 0.5rem;">
+            Plateforme communautaire K-Pop conforme RGAA 4.1.2 et WCAG 2.2 AAA.
+          </p>
+        </div>
+        <div>
+          <strong style="font-size: 0.9rem;">Navigation</strong>
+          <ul class="st-footer-links" role="list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="forum.html">Forum communautaire</a></li>
+            <li><a href="profil.html">Mon Profil Membre</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong style="font-size: 0.9rem;">Fiches Groupes</strong>
+          <ul class="st-footer-links" role="list">
+            <li><a href="bts.html">BTS (3G)</a></li>
+            <li><a href="blackpink.html">BLACKPINK (3G)</a></li>
+            <li><a href="straykids.html">Stray Kids (4G)</a></li>
+            <li><a href="newjeans.html">NewJeans (4G / 5G)</a></li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin: 1.5rem 0 0 0; font-size: 0.825rem; color: var(--st-on-dark-muted);">© 2026 K-Pop Discussion Hub · Projet Fil Rouge UX EFREI Paris.</p>
+    </div>
+  </footer>
+
+  <script src="app.js?v=20261121f" defer></script>
+</body>
+</html>
