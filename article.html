@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Article et fil de discussion complet sur K-Pop Discussion Hub Édition Studio.">
+  <meta name="theme-color" content="#140810">
+  <title>Discussion | K-Pop Discussion Hub</title>
+  <link rel="stylesheet" href="studio.css?v=20261121l">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23140810'/%3E%3Cpath d='M16 7v18M7 16h18' stroke='%23FF2D78' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer à l'article</a>
+
+  <!-- Barre supérieure Studio -->
+  <div class="st-topbar" role="region" aria-label="Édition et accessibilité">
+    <div class="st-container st-topbar-inner">
+      <div class="st-issue-meta">
+        <span class="st-issue-pill">ÉDITION STUDIO</span>
+        <span>N° 04</span>
+        <span>RGAA 4.1.2 / WCAG AAA</span>
+      </div>
+      <div class="st-topbar-actions">
+        <button type="button" id="st-btn-text" class="st-a11y-btn" aria-pressed="false" aria-label="Agrandir le texte">
+          <span aria-hidden="true">A+</span>
+          <span>Texte</span>
+        </button>
+        <button type="button" id="st-btn-contrast" class="st-a11y-btn" aria-pressed="false" aria-label="Activer le contraste élevé">
+          <span aria-hidden="true">◐</span>
+          <span>Contraste</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Masthead Studio sticky -->
+  <header class="st-header" role="banner">
+    <div class="st-container st-header-inner">
+      <a href="index.html" class="st-masthead" aria-label="K-Pop Discussion Hub">
+        <span class="st-masthead-wordmark">K-POP HUB</span>
+        <span class="st-masthead-edition">/ SEOUL EDITION</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul class="st-nav-list" role="list">
+          <li><a href="index.html" class="st-nav-link">Accueil</a></li>
+          <li><a href="index.html#debats-live" class="st-nav-link">Articles &amp; Facts</a></li>
+          <li><a href="index.html#lookbook" class="st-nav-link">Groupes</a></li>
+          <li><a href="forum.html" class="st-nav-link">Forum</a></li>
+          <li id="nav-user-item"><a href="login.html" id="nav-login-link" class="st-nav-link st-nav-cta">Connexion</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <div class="st-container" style="max-width: 920px; padding-bottom: 4rem;">
+
+      <nav class="st-breadcrumb" aria-label="Fil d'Ariane">
+        <ol role="list">
+          <li><a href="index.html">Accueil</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="index.html#debats-live">Articles &amp; Facts</a></li>
+          <li aria-hidden="true">/</li>
+          <li id="article-crumb" aria-current="page">Sujet</li>
+        </ol>
+      </nav>
+
+      <!-- 1. DÉCLARATION / ARTICLE COMPLET AU DÉBUT -->
+      <article id="article-declaration" class="st-card" style="padding: 0; overflow: hidden; margin-top: 0.75rem;" aria-labelledby="article-h1">
+        <div id="article-media-slot" class="st-feature-media" style="aspect-ratio: 16 / 9; border-radius: 0;"></div>
+        <div style="padding: clamp(1.5rem, 3vw, 2.5rem);">
+          <div id="article-meta-slot" class="st-meta-strip"></div>
+          <h1 id="article-h1" style="font-family: var(--font-display); font-size: clamp(1.65rem, 3.2vw, 2.4rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin: 0.6rem 0 1.25rem 0; text-wrap: balance;"></h1>
+          <div id="article-body-slot" style="font-size: 1.025rem; line-height: 1.72; color: var(--st-ink);"></div>
+          <div id="article-verdict-slot" hidden style="margin-top: 1.35rem; padding: 1.15rem 1.35rem; border-radius: var(--st-radius-md); background-color: var(--st-surface-tint); border: 1px solid var(--st-line);">
+            <strong style="display: block; color: var(--st-crimson); margin-bottom: 0.3rem;">Verdict : est-ce que c'est bien ?</strong>
+            <p id="article-verdict-text" style="margin: 0; font-size: 0.95rem; line-height: 1.6;"></p>
+          </div>
+          <div id="article-links-slot" style="display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--st-line);"></div>
+        </div>
+      </article>
+
+      <!-- 2. FORUM COMPLET À LA SUITE SUR 1 PAGE -->
+      <section id="article-forum" style="margin-top: 2.5rem;" aria-labelledby="forum-thread-h2">
+        <div class="st-section-head" style="margin-bottom: 1.25rem;">
+          <div>
+            <h2 id="forum-thread-h2" class="st-section-h2" style="font-size: clamp(1.35rem, 2.4vw, 1.75rem);">
+              Toutes les réponses <span id="article-comments-count" style="color: var(--st-crimson); font-variant-numeric: tabular-nums;"></span>
+            </h2>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;">
+            <div id="article-camp-filters" class="st-filter-group" hidden role="group" aria-label="Filtrer par camp"></div>
+            <label for="article-sort-select" class="sr-only">Trier les réponses</label>
+            <select id="article-sort-select" class="sort-select">
+              <option value="oldest">Ordre chronologique</option>
+              <option value="votes">Plus utiles en premier</option>
+            </select>
+          </div>
+        </div>
+
+        <ul id="article-comments-list" class="st-thread-list" style="background-color: var(--st-surface); border: 1px solid var(--st-line); border-radius: var(--st-radius-lg); padding: clamp(1.25rem, 2.5vw, 1.85rem);" role="list"></ul>
+
+        <!-- Zone de réponse réservée aux membres connectés -->
+        <div id="article-reply-zone" class="st-card" style="margin-top: 1.5rem;"></div>
+      </section>
+
+      <!-- 3. TOUT EN BAS UNIQUEMENT : AUTRES SUJETS QUI POURRAIENT VOUS PLAIRE -->
+      <section id="related-articles-section" style="margin-top: 4.5rem; padding-top: 2.5rem; border-top: 1px solid var(--st-line-strong);" aria-labelledby="related-h2">
+        <h2 id="related-h2" class="st-section-h2" style="font-size: clamp(1.35rem, 2.4vw, 1.75rem); margin-bottom: 1.5rem;">
+          Autres sujets qui pourraient vous plaire
+        </h2>
+        <div id="related-articles-grid" class="st-lookbook-grid"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="st-footer" role="contentinfo">
+    <div class="st-container">
+      <div class="st-footer-grid">
+        <div>
+          <strong style="font-family: var(--font-display); font-size: 1.25rem; letter-spacing: -0.03em;">K-POP HUB / SEOUL EDITION</strong>
+          <p style="color: var(--st-on-dark-muted); font-size: 0.9rem; max-width: 42ch; margin-top: 0.5rem;">
+            Plateforme communautaire K-Pop conforme RGAA 4.1.2 et WCAG 2.2 AAA.
+          </p>
+        </div>
+        <div>
+          <strong style="font-size: 0.9rem;">Navigation</strong>
+          <ul class="st-footer-links" role="list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="forum.html">Forum communautaire</a></li>
+            <li><a href="profil.html">Mon Profil Membre</a></li>
+            <li><a href="login.html">Connexion &amp; Inscription</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong style="font-size: 0.9rem;">Fiches Groupes</strong>
+          <ul class="st-footer-links" role="list">
+            <li><a href="bts.html">BTS (3G)</a></li>
+            <li><a href="blackpink.html">BLACKPINK (3G)</a></li>
+            <li><a href="straykids.html">Stray Kids (4G)</a></li>
+            <li><a href="newjeans.html">NewJeans (4G / 5G)</a></li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin: 1.5rem 0 0 0; font-size: 0.825rem; color: var(--st-on-dark-muted);">© 2026 K-Pop Discussion Hub · Projet Fil Rouge UX EFREI Paris.</p>
+    </div>
+  </footer>
+
+  <script src="articles-data.js?v=20261121k" defer></script>
+  <script src="article.js?v=20261121k" defer></script>
+</body>
+</html>
