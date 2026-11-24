@@ -4,9 +4,10 @@ Projet Fil Rouge **UX / Accessibilité (B3-IN — EFREI Paris)** : plateforme co
 
 ## Maquettes Figma
 
-Toutes les maquettes haute fidélité (11 pages complètes, 1280px, calques éditables) sont consultables ici :
+Toutes les maquettes haute fidélité (11 pages complètes, 1280px, calques éditables) et le prototype interactif (103 liens cliquables) sont consultables ici :
 
-- **Figma — K-Pop Discussion Hub (Édition Studio)** : https://www.figma.com/design/jC3ZuayneQDMkdTxxKic2S
+- **Prototype interactif Figma (Mode Play)** : https://www.figma.com/proto/jC3ZuayneQDMkdTxxKic2S?node-id=1-2&starting-point-node-id=1-2
+- **Maquettes Figma (Mode Design & calques)** : https://www.figma.com/design/jC3ZuayneQDMkdTxxKic2S
 
 ## Lancement en local
 
