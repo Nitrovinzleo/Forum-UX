@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tableau de bord membre K-Pop Discussion Hub : édition du profil, groupes suivis, favoris, commentaires et export RGPD.">
+  <meta name="theme-color" content="#140810">
+  <title>Mon Profil Membre | K-Pop Discussion Hub</title>
+  <link rel="stylesheet" href="studio.css?v=20261121l">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23140810'/%3E%3Cpath d='M16 7v18M7 16h18' stroke='%23FF2D78' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au profil membre</a>
+
+  <!-- Barre supérieure Studio -->
+  <div class="st-topbar" role="region" aria-label="Édition et accessibilité">
+    <div class="st-container st-topbar-inner">
+      <div class="st-issue-meta">
+        <span class="st-issue-pill">ÉDITION STUDIO</span>
+        <span>N° 04</span>
+        <span>RGAA 4.1.2 / WCAG AAA</span>
+      </div>
+      <div class="st-topbar-actions">
+        <button type="button" id="btn-text-size" class="st-a11y-btn" aria-pressed="false" aria-label="Agrandir le texte à 125%">
+          <span aria-hidden="true">A+</span>
+          <span>Texte</span>
+        </button>
+        <button type="button" id="btn-high-contrast" class="st-a11y-btn" aria-pressed="false" aria-label="Activer le contraste élevé">
+          <span aria-hidden="true">◐</span>
+          <span>Contraste</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Masthead Studio sticky -->
+  <header class="st-header" role="banner">
+    <div class="st-container st-header-inner">
+      <a href="index.html" class="st-masthead" aria-label="K-Pop Discussion Hub">
+        <span class="st-masthead-wordmark">K-POP HUB</span>
+        <span class="st-masthead-edition">/ SEOUL EDITION</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul class="st-nav-list" role="list">
+          <li><a href="index.html" class="st-nav-link">Accueil</a></li>
+          <li><a href="index.html#debats-live" class="st-nav-link">Débats live</a></li>
+          <li><a href="index.html#lookbook" class="st-nav-link">Groupes</a></li>
+          <li><a href="forum.html" class="st-nav-link">Forum</a></li>
+          <li id="nav-user-item"><a href="login.html" id="nav-login-link" class="st-nav-link st-nav-cta">Connexion</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenu principal : Profil Membre (Strictement sobre, zéro mascotte) -->
+  <main id="main-content" tabindex="-1">
+    <div class="st-container" style="padding-bottom: 4rem;">
+
+      <nav class="st-breadcrumb" aria-label="Fil d'Ariane">
+        <ol role="list">
+          <li><a href="index.html">Accueil</a></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page">Mon Profil Membre</li>
+        </ol>
+      </nav>
+
+      <header class="st-page-hero">
+        <div class="st-meta-strip">
+          <span class="st-tag st-tag-gold">Espace Personnel</span>
+          <span>SESSION ACTIVE</span>
+        </div>
+        <h1 class="st-page-h1">Mon Profil &amp; Tableau de Bord</h1>
+        <p class="st-page-lead">
+          Modifiez vos informations, gérez vos groupes suivis et retrouvez l'ensemble de vos commentaires et articles sauvegardés.
+        </p>
+      </header>
+
+      <div id="profile-toast" class="feedback-alert alert-success" hidden role="status" aria-live="polite"></div>
+
+      <div class="st-profile-grid">
+
+        <!-- Colonne gauche : Identité & Éditeur inline -->
+        <aside aria-label="Informations personnelles et compte">
+          <div class="st-card">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+              <div class="st-profile-avatar" style="overflow: hidden; position: relative;" aria-hidden="true">
+                <img id="profile-avatar-img" src="assets/images/avatars/minji.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                <span id="profile-avatar-letter" hidden>M</span>
+              </div>
+              <div>
+                <h2 id="profile-display-name" style="margin: 0; font-family: var(--font-display); font-size: 1.3rem; font-weight: 800;">Min-ji Park</h2>
+                <div id="profile-display-email" style="font-size: 0.85rem; color: var(--st-ink-muted); font-weight: 600;">minji.park@kpop-hub.fr</div>
+              </div>
+            </div>
+
+            <p id="profile-bio-text" style="margin: 0; font-size: 0.925rem; line-height: 1.55; color: var(--st-ink);">
+              Passionnée par la production musicale coréenne, l'histoire des générations K-Pop et la scène LCK.
+            </p>
+
+            <div class="st-meta-rows" role="list" aria-label="Détails du compte">
+              <div class="st-meta-row" role="listitem">
+                <span class="st-meta-k">Inscription</span>
+                <span class="st-meta-v">12 octobre 2024</span>
+              </div>
+              <div class="st-meta-row" role="listitem">
+                <span class="st-meta-k">Groupe favori</span>
+                <span id="profile-bias-val" class="st-meta-v">NewJeans</span>
+              </div>
+              <div class="st-meta-row" role="listitem">
+                <span class="st-meta-k">Localisation</span>
+                <span id="profile-location-val" class="st-meta-v">Paris / Séoul</span>
+              </div>
+              <div class="st-meta-row" role="listitem">
+                <span class="st-meta-k">Charte forum</span>
+                <span class="st-meta-v">Signée</span>
+              </div>
+            </div>
+
+            <button type="button" id="btn-toggle-edit-profile" class="st-btn st-btn-primary" style="width: 100%; margin-bottom: 0.65rem;" aria-expanded="false" aria-controls="profile-editor-form">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+              <span>Modifier le profil</span>
+            </button>
+
+            <form id="profile-editor-form" hidden style="margin-block: 1rem; padding-top: 1rem; border-top: 1px solid var(--st-line);">
+              <div class="form-group" style="margin-bottom: 0.85rem;">
+                <label for="edit-avatar-file" class="form-label">Photo de profil</label>
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                  <img id="edit-avatar-preview" src="assets/images/avatars/minji.jpg" alt="Aperçu de la photo de profil" class="st-comment-avatar" style="width: 48px; height: 48px;">
+                  <button type="button" id="btn-remove-avatar" class="st-btn st-btn-ghost" style="min-height: 36px; padding: 0.25rem 0.65rem; font-size: 0.8rem;">Retirer la photo</button>
+                </div>
+                <input type="file" id="edit-avatar-file" accept="image/png,image/jpeg,image/webp,image/gif" class="form-input" style="padding: 0.45rem 0.65rem;">
+              </div>
+              <div class="form-group" style="margin-bottom: 0.85rem;">
+                <label for="edit-name" class="form-label">Pseudo</label>
+                <input type="text" id="edit-name" class="form-input" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 0.85rem;">
+                <label for="edit-location" class="form-label">Localisation</label>
+                <input type="text" id="edit-location" class="form-input">
+              </div>
+              <div class="form-group" style="margin-bottom: 0.85rem;">
+                <label for="edit-bias" class="form-label">Groupe favori</label>
+                <select id="edit-bias" class="sort-select" style="width: 100%;">
+                  <option value="NewJeans">NewJeans</option>
+                  <option value="BLACKPINK">BLACKPINK</option>
+                  <option value="BTS">BTS</option>
+                  <option value="Stray Kids">Stray Kids</option>
+                  <option value="TWICE">TWICE</option>
+                  <option value="K/DA">K/DA</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="edit-bio" class="form-label">Biographie</label>
+                <textarea id="edit-bio" class="form-textarea" rows="3"></textarea>
+              </div>
+              <button type="submit" class="st-btn st-btn-primary" style="width: 100%;">Enregistrer</button>
+            </form>
+
+            <button type="button" id="btn-profile-logout" class="st-btn st-btn-ghost" style="width: 100%;">Se déconnecter</button>
+          </div>
+        </aside>
+
+        <!-- Colonne droite : KPIs & Onglets fonctionnels -->
+        <div>
+          <section class="st-kpi-grid" aria-label="Indicateurs d'activité">
+            <div class="st-kpi-card">
+              <span class="st-kpi-label">Commentaires publiés</span>
+              <span id="kpi-comments-count" class="st-kpi-num">1</span>
+            </div>
+            <div class="st-kpi-card">
+              <span class="st-kpi-label">Articles sauvegardés</span>
+              <span id="kpi-saved-count" class="st-kpi-num">0</span>
+            </div>
+            <div class="st-kpi-card">
+              <span class="st-kpi-label">Groupes suivis</span>
+              <span id="kpi-groups-count" class="st-kpi-num">2</span>
+            </div>
+          </section>
+
+          <section class="st-card" aria-label="Gestion du compte">
+            <div class="profile-tabs" role="tablist" aria-label="Sections du profil">
+              <button type="button" role="tab" id="ptab-activity" class="profile-tab-btn" aria-selected="true" aria-controls="ppanel-activity">Activité &amp; Commentaires</button>
+              <button type="button" role="tab" id="ptab-favorites" class="profile-tab-btn" aria-selected="false" aria-controls="ppanel-favorites">Favoris &amp; Groupes</button>
+              <button type="button" role="tab" id="ptab-settings" class="profile-tab-btn" aria-selected="false" aria-controls="ppanel-settings">Paramètres &amp; RGPD</button>
+            </div>
+
+            <div id="ppanel-activity" role="tabpanel" aria-labelledby="ptab-activity">
+              <h3 style="margin: 0 0 1rem 0; font-family: var(--font-display); font-size: 1.15rem;">Vos contributions récentes</h3>
+              <div id="profile-activity-list" style="display: flex; flex-direction: column; gap: 0.85rem;">
+                <article class="activity-card">
+                  <div style="display: flex; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem;">
+                    <strong style="font-size: 0.925rem;">Débat : De la 2G à la 5G K-Pop</strong>
+                    <span class="st-tag">Forum</span>
+                  </div>
+                  <p style="margin: 0; font-size: 0.9rem; color: var(--st-ink-muted); line-height: 1.55;">
+                    « La 3G a imposé les standards mondiaux du streaming, mais la 4G et la 5G ont transformé le format des chansons autour de TikTok et de l'UK Garage. »
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div id="ppanel-favorites" role="tabpanel" aria-labelledby="ptab-favorites" hidden>
+              <h3 style="margin: 0 0 0.4rem 0; font-family: var(--font-display); font-size: 1.15rem;">Groupes suivis</h3>
+              <p style="margin: 0 0 0.75rem 0; font-size: 0.9rem; color: var(--st-ink-muted);">Sélectionnez vos groupes pour personnaliser votre espace.</p>
+              <div id="fav-groups-container" class="fav-group-grid" role="group" aria-label="Groupes suivis">
+                <button type="button" class="fav-chip-btn" data-fav-group="BTS" aria-pressed="false">BTS (3G)</button>
+                <button type="button" class="fav-chip-btn" data-fav-group="BLACKPINK" aria-pressed="true">BLACKPINK (3G)</button>
+                <button type="button" class="fav-chip-btn" data-fav-group="Stray Kids" aria-pressed="false">Stray Kids (4G)</button>
+                <button type="button" class="fav-chip-btn" data-fav-group="NewJeans" aria-pressed="true">NewJeans (4G / 5G)</button>
+                <button type="button" class="fav-chip-btn" data-fav-group="TWICE" aria-pressed="false">TWICE (3G)</button>
+                <button type="button" class="fav-chip-btn" data-fav-group="K/DA" aria-pressed="false">K/DA (Virtuel)</button>
+              </div>
+
+              <h3 style="margin: 1.75rem 0 0.75rem 0; font-family: var(--font-display); font-size: 1.15rem;">Articles sauvegardés</h3>
+              <div id="profile-saved-articles" style="display: flex; flex-direction: column; gap: 0.75rem;"></div>
+            </div>
+
+            <div id="ppanel-settings" role="tabpanel" aria-labelledby="ptab-settings" hidden>
+              <h3 style="margin: 0 0 0.75rem 0; font-family: var(--font-display); font-size: 1.15rem;">Préférences d'accessibilité</h3>
+              <div class="st-meta-rows" style="margin-top: 0;">
+                <div class="st-meta-row">
+                  <span class="st-meta-k">Taille du texte</span>
+                  <span id="pref-status-text" class="st-meta-v">Standard (100%)</span>
+                </div>
+                <div class="st-meta-row">
+                  <span class="st-meta-k">Contraste</span>
+                  <span id="pref-status-contrast" class="st-meta-v">Édition Studio</span>
+                </div>
+              </div>
+
+              <h3 style="margin: 0 0 0.45rem 0; font-family: var(--font-display); font-size: 1.15rem;">Portabilité des données (RGPD)</h3>
+              <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: var(--st-ink-muted);">
+                Téléchargez une archive JSON de votre profil, vos groupes suivis, vos articles sauvegardés et vos commentaires.
+              </p>
+              <button type="button" id="btn-export-gdpr" class="st-btn st-btn-ghost">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Exporter mes données (.json)</span>
+              </button>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div id="sr-announcements" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="st-footer" role="contentinfo">
+    <div class="st-container">
+      <div class="st-footer-grid">
+        <div>
+          <strong style="font-family: var(--font-display); font-size: 1.25rem; letter-spacing: -0.03em;">K-POP HUB / SEOUL EDITION</strong>
+          <p style="color: var(--st-on-dark-muted); font-size: 0.9rem; max-width: 42ch; margin-top: 0.5rem;">
+            Plateforme communautaire K-Pop conforme RGAA 4.1.2 et WCAG 2.2 AAA.
+          </p>
+        </div>
+        <div>
+          <strong style="font-size: 0.9rem;">Navigation</strong>
+          <ul class="st-footer-links" role="list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="forum.html">Forum communautaire</a></li>
+            <li><a href="login.html">Connexion &amp; Inscription</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong style="font-size: 0.9rem;">Fiches Groupes</strong>
+          <ul class="st-footer-links" role="list">
+            <li><a href="bts.html">BTS (3G)</a></li>
+            <li><a href="blackpink.html">BLACKPINK (3G)</a></li>
+            <li><a href="straykids.html">Stray Kids (4G)</a></li>
+            <li><a href="newjeans.html">NewJeans (4G / 5G)</a></li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin: 1.5rem 0 0 0; font-size: 0.825rem; color: var(--st-on-dark-muted);">© 2026 K-Pop Discussion Hub · Projet Fil Rouge UX EFREI Paris.</p>
+    </div>
+  </footer>
+
+  <script src="app.js?v=20261121k" defer></script>
+</body>
+</html>
