@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="K-Pop Discussion Hub Édition Studio : magazine éditorial K-Pop et esport, dossiers Keria (T1) et K/DA Firestarter, lookbook groupes et chronologie des générations.">
+  <meta name="theme-color" content="#140810">
+  <title>K-Pop Discussion Hub : Édition Studio</title>
+  <link rel="stylesheet" href="studio.css?v=20261121l">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23140810'/%3E%3Cpath d='M16 7v18M7 16h18' stroke='%23FF2D78' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- Barre supérieure utilitaire & bouton de comparaison -->
+  <div class="st-topbar" role="region" aria-label="Édition et accessibilité">
+    <div class="st-container st-topbar-inner">
+      <div class="st-issue-meta">
+        <span class="st-issue-pill">ÉDITION STUDIO</span>
+        <span>N° 04</span>
+        <span>NOVEMBRE 2026</span>
+        <span>RGAA 4.1.2 / WCAG AAA</span>
+      </div>
+      <div class="st-topbar-actions">
+        <button type="button" id="st-btn-text" class="st-a11y-btn" aria-pressed="false" aria-label="Agrandir le texte">
+          <span aria-hidden="true">A+</span>
+          <span>Texte</span>
+        </button>
+        <button type="button" id="st-btn-contrast" class="st-a11y-btn" aria-pressed="false" aria-label="Activer le contraste élevé">
+          <span aria-hidden="true">◐</span>
+          <span>Contraste</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Masthead éditorial sticky -->
+  <header class="st-header" role="banner">
+    <div class="st-container st-header-inner">
+      <a href="index.html" class="st-masthead" aria-label="K-Pop Discussion Hub">
+        <span class="st-masthead-wordmark">K-POP HUB</span>
+        <span class="st-masthead-edition">/ SEOUL EDITION</span>
+      </a>
+
+      <nav aria-label="Navigation principale">
+        <ul class="st-nav-list" role="list">
+          <li><a href="#une" class="st-nav-link">À la une</a></li>
+          <li><a href="#debats-live" class="st-nav-link">Débats live</a></li>
+          <li><a href="#lookbook" class="st-nav-link">Groupes</a></li>
+          <li><a href="#chronologie" class="st-nav-link">Générations</a></li>
+          <li><a href="forum.html" class="st-nav-link">Forum</a></li>
+          <li id="nav-user-item"><a href="login.html" id="nav-login-link" class="st-nav-link st-nav-cta">Connexion</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- 1. COUVERTURE ASYMÉTRIQUE (ABOVE THE FOLD) -->
+    <section id="une" class="st-cover-section" aria-labelledby="st-cover-heading">
+      <div class="st-container">
+        <div class="st-cover-intro">
+          <h1 id="st-cover-heading" class="st-cover-h1">
+            La scène K-Pop, entre Séoul et la Faille.
+          </h1>
+          <p class="st-cover-lead">
+            Dossiers musicaux, passerelles esport et débats ouverts sans filtre, pensés pour être lus et débattus.
+          </p>
+        </div>
+
+        <div class="st-cover-grid">
+
+          <!-- Une Principale : Keria (T1) -->
+          <article class="st-feature-card" aria-labelledby="st-keria-h2">
+            <div class="st-bobi-peek">
+              <button type="button" class="st-bobi-btn" data-bobi-msg="Keria qui sort Super Shy en synchro parfaite après un BO5 de LCK : meilleur crossover de l'année." aria-label="Bobi la mascotte fan de T1">
+                <img src="assets/images/mascot/mascot-hype.png?v=20261111h" alt="Bobi la mascotte enthousiaste" class="st-bobi-img">
+              </button>
+            </div>
+
+            <div class="st-feature-media">
+              <video id="keria-cover-video" controls playsinline preload="metadata" poster="assets/images/keria-preview.jpg" aria-label="Vidéo de Keria (T1) en train de danser sur des sons K-Pop">
+                <source src="assets/videos/keria-dance.mp4" type="video/mp4">
+                <track kind="captions" srclang="fr" label="Français" src="assets/videos/keria-dance.vtt" default>
+                Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+              </video>
+              <button type="button" class="st-video-play-overlay" data-video-target="keria-cover-video" aria-label="Lancer la vidéo de Keria (T1)">
+                <span class="st-play-circle" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+                </span>
+                <span class="st-play-caption">Lancer la vidéo</span>
+              </button>
+            </div>
+
+            <div class="st-feature-body">
+              <div class="st-meta-strip">
+                <span class="st-tag">Esport &amp; K-Pop</span>
+                <span>VIDÉO INTÉGRÉE</span>
+                <span>2 MIN</span>
+              </div>
+
+              <h2 id="st-keria-h2" class="st-feature-title">
+                Keria (T1) se lance sur NewJeans, aespa et tente la choré de « Idol » (YOASOBI)
+              </h2>
+
+              <p class="st-feature-excerpt">
+                Surnommé le « Genius Monster » et coéquipier de Faker chez T1, Ryu « Keria » Min-seok est considéré comme le meilleur support de l'histoire de League of Legends. Multiple champion du monde et fan assumé de NewJeans (il avait juré d'atteindre la finale des Worlds 2023 pour les voir sur scène), il régale ses streams avec des reprises K-Pop et ses tentatives hilarantes sur le tempo infernal de <em>« アイドル (Idol) »</em> de YOASOBI.
+              </p>
+
+              <div class="st-feature-footer">
+                <a href="article.html?id=keria" class="st-btn st-btn-primary">
+                  <span>Ouvrir le sujet complet</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="https://www.youtube.com/watch?v=gzT0ccj_Wic" target="_blank" rel="noopener noreferrer" class="st-btn st-btn-ghost">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span>Clip YouTube Keria</span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=m9SMT5ipbxk" target="_blank" rel="noopener noreferrer" class="st-btn st-btn-ghost">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                  <span>YOASOBI · アイドル</span>
+                </a>
+                <button type="button" class="st-btn st-btn-ghost st-save-btn" data-bookmark-id="article-keria" data-bookmark-title="Keria (T1) se lance sur NewJeans et tente Idol de YOASOBI" aria-pressed="false">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                  <span class="st-save-label">Sauvegarder</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Une Secondaire Sombre : K/DA Firestarter + Sondage Live -->
+          <article class="st-feature-card st-feature-card-dark" aria-labelledby="st-kda-h2">
+            <div class="st-feature-media">
+              <img src="assets/images/kda_firestarter.jpg" alt="Visuel officiel du clip K/DA FIRESTARTER réalisé avec le studio Fortiche" style="object-position: center center;" loading="eager">
+            </div>
+
+            <div class="st-feature-body">
+              <div class="st-meta-strip">
+                <span class="st-tag st-tag-gold">Débat chaud</span>
+                <span>K/DA FIRESTARTER</span>
+                <span>3 MIN</span>
+              </div>
+
+              <h2 id="st-kda-h2" class="st-feature-title">
+                K/DA Firestarter : vrai coup de maître musical ou pur LARP marketing ?
+              </h2>
+
+              <p class="st-feature-excerpt">
+                Prod trap-pop millimétrée et visuels 3D : le titre claque en playlist gaming, mais divise sur sa légitimité face aux groupes d'agences coréennes.
+              </p>
+
+              <!-- Sondage interactif en temps réel -->
+              <div class="st-poll-box" aria-label="Sondage en direct K/DA">
+                <p class="st-poll-question">Votre verdict sur K/DA Firestarter :</p>
+                <div class="st-poll-buttons" role="group" aria-label="Voter pour un camp">
+                  <button type="button" id="poll-btn-kpop" class="st-poll-btn" aria-pressed="false">Vraie K-Pop</button>
+                  <button type="button" id="poll-btn-larp" class="st-poll-btn" aria-pressed="false">C'est du LARP</button>
+                </div>
+                <div class="st-poll-bar-track" aria-hidden="true">
+                  <div id="poll-bar-kpop" class="st-poll-bar-kpop" style="width: 47%;"></div>
+                  <div id="poll-bar-larp" class="st-poll-bar-larp" style="width: 53%;"></div>
+                </div>
+                <div class="st-poll-stats" aria-live="polite">
+                  <span id="poll-stat-kpop">Vraie K-Pop : 47%</span>
+                  <span id="poll-stat-larp">LARP : 53%</span>
+                </div>
+              </div>
+
+              <div class="st-feature-footer">
+                <a href="article.html?id=kda" class="st-btn st-btn-ghost-dark">
+                  <span>Ouvrir le débat complet</span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=Mmw-PpWhKFg" target="_blank" rel="noopener noreferrer" class="st-btn st-btn-primary">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span>Voir le clip officiel</span>
+                </a>
+                <button type="button" class="st-btn st-btn-ghost-dark st-save-btn" data-bookmark-id="article-kda" data-bookmark-title="K/DA et le buzz Firestarter : vraie K-Pop ou LARP ?" aria-pressed="false">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                  <span class="st-save-label">Sauvegarder</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ARTICLES, FACTS & APERÇU DES RÉACTIONS (MAX 2 COMMENTAIRES PAR SUJET) -->
+    <section id="debats-live" class="st-section" aria-labelledby="st-debats-h2">
+      <div class="st-container">
+        <div class="st-section-head">
+          <div>
+            <h2 id="st-debats-h2" class="st-section-h2">Articles, Facts &amp; Débats</h2>
+            <p style="margin: 0.35rem 0 0 0; font-size: 0.925rem; color: var(--st-ink-muted);">
+              Cliquez sur un sujet pour lire l'article complet et toutes les réponses. La publication est réservée aux membres connectés.
+            </p>
+          </div>
+          <a href="forum.html" class="st-btn st-btn-ghost">Ouvrir le grand forum</a>
+        </div>
+
+        <div id="st-articles-feed" class="st-debates-grid"></div>
+      </div>
+    </section>
+
+    <!-- 3. LOOKBOOK GROUPES PHARES (FILTRABLE) -->
+    <section id="lookbook" class="st-section" aria-labelledby="st-lookbook-h2">
+      <div class="st-container">
+        <div class="st-section-head">
+          <h2 id="st-lookbook-h2" class="st-section-h2">Lookbook : Groupes &amp; Scènes</h2>
+          <div class="st-filter-group" role="group" aria-label="Filtrer par génération">
+            <button type="button" class="st-filter-btn st-group-filter" data-filter="all" aria-pressed="true">Tous</button>
+            <button type="button" class="st-filter-btn st-group-filter" data-filter="3g" aria-pressed="false">3G</button>
+            <button type="button" class="st-filter-btn st-group-filter" data-filter="4g" aria-pressed="false">4G / 5G</button>
+            <button type="button" class="st-filter-btn st-group-filter" data-filter="culture" aria-pressed="false">Culture</button>
+          </div>
+        </div>
+
+        <div class="st-lookbook-grid">
+          <article class="st-look-card" data-category="3g">
+            <div class="st-look-media">
+              <img src="assets/images/bts-real.jpg" alt="Photographie officielle des sept membres de BTS" loading="lazy">
+              <span class="st-gen-stamp">3G</span>
+            </div>
+            <div class="st-look-body">
+              <h3 class="st-look-title"><a href="bts.html">BTS</a></h3>
+              <p class="st-look-sub">Pop &amp; Hip-Hop réflexif</p>
+              <p class="st-look-desc">Pionniers de la mondialisation K-Pop, portés par une discographie introspective.</p>
+            </div>
+          </article>
+
+          <article class="st-look-card" data-category="3g">
+            <div class="st-bobi-peek">
+              <button type="button" class="st-bobi-btn" data-bobi-msg="BLACKPINK in your area ! Même ma grand-mère connaît le sifflement de Whistle." aria-label="Bobi la mascotte BLINK">
+                <img src="assets/images/mascot/mascot-wink.png?v=20261111h" alt="Bobi la mascotte BLINK" class="st-bobi-img">
+              </button>
+            </div>
+            <div class="st-look-media">
+              <img src="assets/images/blackpink-real.jpg" alt="Photographie officielle des quatre membres de BLACKPINK" loading="lazy">
+              <span class="st-gen-stamp">3G</span>
+            </div>
+            <div class="st-look-body">
+              <h3 class="st-look-title"><a href="blackpink.html">BLACKPINK</a></h3>
+              <p class="st-look-sub">Girl Crush &amp; Fashion EDM</p>
+              <p class="st-look-desc">Drops cuivrés, records YouTube et alliance avec les quatre maisons de haute couture.</p>
+            </div>
+          </article>
+
+          <article class="st-look-card" data-category="4g">
+            <div class="st-look-media">
+              <img src="assets/images/straykids-real.jpg" alt="Photographie officielle de Stray Kids sur scène" loading="lazy">
+              <span class="st-gen-stamp">4G</span>
+            </div>
+            <div class="st-look-body">
+              <h3 class="st-look-title"><a href="straykids.html">Stray Kids</a></h3>
+              <p class="st-look-sub">Self-Producing &amp; Noise Trap</p>
+              <p class="st-look-desc">Mené par 3RACHA, le groupe forge des morceaux hybrides entre drill et électro.</p>
+            </div>
+          </article>
+
+          <article class="st-look-card" data-category="4g">
+            <div class="st-look-media">
+              <img src="assets/images/newjeans-real.jpg" alt="Photographie officielle des cinq membres de NewJeans" loading="lazy">
+              <span class="st-gen-stamp">4G / 5G</span>
+            </div>
+            <div class="st-look-body">
+              <h3 class="st-look-title"><a href="newjeans.html">NewJeans</a></h3>
+              <p class="st-look-sub">Nostalgie Y2K &amp; UK Garage</p>
+              <p class="st-look-desc">Rupture minimaliste mêlant R&amp;B 2000 et rythmes Jersey Club très repris par Keria.</p>
+            </div>
+          </article>
+
+          <article class="st-look-card" data-category="3g">
+            <div class="st-look-media">
+              <img src="assets/images/twice-real.jpg" alt="Photographie officielle des neuf membres de TWICE" loading="lazy">
+              <span class="st-gen-stamp">3G</span>
+            </div>
+            <div class="st-look-body">
+              <h3 class="st-look-title"><a href="twice.html">TWICE</a></h3>
+              <p class="st-look-sub">Color Pop &amp; Synthwave</p>
+              <p class="st-look-desc">Des refrains cultes jusqu'à la synth-pop ciselée, reines des ventes physiques en Asie.</p>
+            </div>
+          </article>
+
+          <article class="st-look-card" data-category="culture">
+            <div class="st-look-media">
+              <img src="assets/images/lightstick-ocean-real.jpg" alt="Océan de lightsticks synchronisés dans un stade de concert K-Pop" loading="lazy">
+              <span class="st-gen-stamp">FANDOM</span>
+            </div>
+            <div class="st-look-body">
+              <h3 class="st-look-title"><a href="lightsticks.html">L'Océan de Lightsticks</a></h3>
+              <p class="st-look-sub">Communion &amp; Bluetooth</p>
+              <p class="st-look-desc">Bâtons lumineux synchronisés en temps réel qui transforment les gradins en écran géant.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CHRONOLOGIE INTERACTIVE DES GÉNÉRATIONS -->
+    <section id="chronologie" class="st-section" aria-labelledby="st-era-h2">
+      <div class="st-container">
+        <div class="st-section-head">
+          <h2 id="st-era-h2" class="st-section-h2">Comment le son K-Pop a muté</h2>
+        </div>
+
+        <div class="st-timeline-tabs" role="tablist" aria-label="Générations K-Pop">
+          <button type="button" role="tab" class="st-era-btn" id="era-tab-2g" aria-selected="true" aria-controls="era-panel-2g">
+            <span class="st-era-code">2G</span>
+            <span class="st-era-years">2008 – 2012</span>
+          </button>
+          <button type="button" role="tab" class="st-era-btn" id="era-tab-3g" aria-selected="false" aria-controls="era-panel-3g">
+            <span class="st-era-code">3G</span>
+            <span class="st-era-years">2013 – 2018</span>
+          </button>
+          <button type="button" role="tab" class="st-era-btn" id="era-tab-4g" aria-selected="false" aria-controls="era-panel-4g">
+            <span class="st-era-code">4G</span>
+            <span class="st-era-years">2019 – 2022</span>
+          </button>
+          <button type="button" role="tab" class="st-era-btn" id="era-tab-5g" aria-selected="false" aria-controls="era-panel-5g">
+            <span class="st-era-code">5G</span>
+            <span class="st-era-years">2023 – Aujourd'hui</span>
+          </button>
+        </div>
+
+        <div id="era-panel-2g" class="st-era-panel" role="tabpanel" aria-labelledby="era-tab-2g">
+          <div>
+            <h3 style="margin: 0 0 0.6rem 0; font-family: var(--font-display); font-size: 1.4rem;">L'âge d'or des hooks électro-pop</h3>
+            <p style="margin: 0; color: var(--st-ink-muted);">Refrains ultra répétitifs calibrés pour la télévision coréenne et le marché japonais, chorégraphies iconiques et naissance des premiers lightsticks officiels.</p>
+          </div>
+          <div>
+            <strong style="display: block; font-size: 0.85rem; color: var(--st-crimson); margin-bottom: 0.35rem;">Groupes repères</strong>
+            <p style="margin: 0; font-weight: 700;">BIGBANG, Girls' Generation, 2NE1, SHINee, Wonder Girls</p>
+          </div>
+        </div>
+
+        <div id="era-panel-3g" class="st-era-panel" role="tabpanel" aria-labelledby="era-tab-3g" hidden>
+          <div>
+            <h3 style="margin: 0 0 0.6rem 0; font-family: var(--font-display); font-size: 1.4rem;">L'explosion mondiale YouTube &amp; stades</h3>
+            <p style="margin: 0; color: var(--st-ink-muted);">Productions hybrides hip-hop / EDM, récits conceptuels d'albums et conquête des charts américains et européens grâce aux fandoms organisés.</p>
+          </div>
+          <div>
+            <strong style="display: block; font-size: 0.85rem; color: var(--st-crimson); margin-bottom: 0.35rem;">Groupes repères</strong>
+            <p style="margin: 0; font-weight: 700;">BTS, BLACKPINK, TWICE, EXO, SEVENTEEN, Red Velvet</p>
+          </div>
+        </div>
+
+        <div id="era-panel-4g" class="st-era-panel" role="tabpanel" aria-labelledby="era-tab-4g" hidden>
+          <div>
+            <h3 style="margin: 0 0 0.6rem 0; font-family: var(--font-display); font-size: 1.4rem;">Autoproduction, noise music &amp; univers transmédias</h3>
+            <p style="margin: 0; color: var(--st-ink-muted);">Performances scéniques millimétrées pour les fancams 4K, formats courts viraux et passerelles directes avec le gaming et les avatars virtuels.</p>
+          </div>
+          <div>
+            <strong style="display: block; font-size: 0.85rem; color: var(--st-crimson); margin-bottom: 0.35rem;">Groupes repères</strong>
+            <p style="margin: 0; font-weight: 700;">Stray Kids, aespa, NewJeans, (G)I-DLE, LE SSERAFIM, IVE</p>
+          </div>
+        </div>
+
+        <div id="era-panel-5g" class="st-era-panel" role="tabpanel" aria-labelledby="era-tab-5g" hidden>
+          <div>
+            <h3 style="margin: 0 0 0.6rem 0; font-family: var(--font-display); font-size: 1.4rem;">Easy listening, UK Garage &amp; pop sans frontières</h3>
+            <p style="margin: 0; color: var(--st-ink-muted);">Titres sous les trois minutes pensés pour l'écoute quotidienne, esthétiques rétro-analogiques et sorties simultanées en coréen et en anglais.</p>
+          </div>
+          <div>
+            <strong style="display: block; font-size: 0.85rem; color: var(--st-crimson); margin-bottom: 0.35rem;">Groupes repères</strong>
+            <p style="margin: 0; font-weight: 700;">RIIZE, ZEROBASEONE, ILLIT, BABYMONSTER, KISS OF LIFE</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="st-bobi-toast" class="st-bobi-toast" hidden role="status" aria-live="polite"></div>
+
+  <footer class="st-footer" role="contentinfo">
+    <div class="st-container">
+      <div class="st-footer-grid">
+        <div>
+          <strong style="font-family: var(--font-display); font-size: 1.25rem; letter-spacing: -0.03em;">K-POP HUB / SEOUL EDITION</strong>
+          <p style="color: var(--st-on-dark-muted); font-size: 0.9rem; max-width: 42ch; margin-top: 0.5rem;">
+            Édition Studio conçue avec les standards Hallmark, Impeccable, Apple HIG et RGAA 4.1.2.
+          </p>
+        </div>
+        <div>
+          <strong style="font-size: 0.9rem;">Navigation</strong>
+          <ul class="st-footer-links" role="list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="forum.html">Forum communautaire</a></li>
+            <li><a href="profil.html">Mon Profil Membre</a></li>
+            <li><a href="login.html">Connexion &amp; Inscription</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong style="font-size: 0.9rem;">Fiches Groupes</strong>
+          <ul class="st-footer-links" role="list">
+            <li><a href="bts.html">BTS (3G)</a></li>
+            <li><a href="blackpink.html">BLACKPINK (3G)</a></li>
+            <li><a href="straykids.html">Stray Kids (4G)</a></li>
+            <li><a href="newjeans.html">NewJeans (4G / 5G)</a></li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin: 1.5rem 0 0 0; font-size: 0.825rem; color: var(--st-on-dark-muted);">
+        © 2026 K-Pop Discussion Hub · Projet Fil Rouge UX EFREI Paris.
+      </p>
+    </div>
+  </footer>
+
+  <script src="articles-data.js?v=20261121k"></script>
+  <script src="studio.js?v=20261121l"></script>
+</body>
+</html>
