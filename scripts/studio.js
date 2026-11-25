@@ -304,15 +304,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 10. Panneau publicitaire déroulant automatique toutes les 3 s (BLACKPINK, BTS, Stray Kids, TWICE, NewJeans)
-  const adCarousel = document.getElementById('st-ad-carousel');
-  if (adCarousel) {
-    const track = document.getElementById('st-ad-track');
-    const slides = Array.from(adCarousel.querySelectorAll('.st-ad-slide'));
-    const dots = Array.from(adCarousel.querySelectorAll('.st-ad-dot'));
-    const progressFill = document.getElementById('st-ad-progress-fill');
-    const pauseBtn = document.getElementById('st-ad-pause-btn');
-    const DURATION = 3000;
+  // 10. Panneaux publicitaires déroulants automatiques toutes les 3 s (Lightsticks + Razer × BLACKPINK)
+  function initAutoCarousel(carouselId, trackId, progressId, pauseId, durationMs = 3000) {
+    const carousel = document.getElementById(carouselId);
+    if (!carousel) return;
+    const track = document.getElementById(trackId);
+    const slides = Array.from(carousel.querySelectorAll('.st-ad-slide'));
+    const dots = Array.from(carousel.querySelectorAll('.st-ad-dot'));
+    const progressFill = document.getElementById(progressId);
+    const pauseBtn = document.getElementById(pauseId);
     let current = 0;
     let paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let hovered = false;
@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
       progressFill.style.width = '0%';
       void progressFill.offsetWidth;
       if (!paused && !hovered) {
-        progressFill.style.transition = `width ${DURATION}ms linear`;
+        progressFill.style.transition = `width ${durationMs}ms linear`;
         progressFill.style.width = '100%';
       }
     }
@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
       clearInterval(timer);
       if (paused || hovered) return;
       restartProgress();
-      timer = setInterval(() => showSlide(current + 1), DURATION);
+      timer = setInterval(() => showSlide(current + 1), durationMs);
     }
 
     dots.forEach((dot) => {
@@ -377,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    adCarousel.addEventListener('mouseenter', () => {
+    carousel.addEventListener('mouseenter', () => {
       hovered = true;
       clearInterval(timer);
       if (progressFill) {
@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
         progressFill.style.width = '0%';
       }
     });
-    adCarousel.addEventListener('mouseleave', () => {
+    carousel.addEventListener('mouseleave', () => {
       hovered = false;
       startTimer();
     });
@@ -393,6 +393,9 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(0);
     startTimer();
   }
+
+  initAutoCarousel('st-ad-carousel', 'st-ad-track', 'st-ad-progress-fill', 'st-ad-pause-btn', 3000);
+  initAutoCarousel('st-razer-carousel', 'st-razer-track', 'st-razer-progress-fill', 'st-razer-pause-btn', 3000);
 
   // 11. Code promo masqué sous papier cadeau qui tombe au clic
   const codeBtn = document.getElementById('st-ad-code-btn');

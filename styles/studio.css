@@ -1033,6 +1033,84 @@ body.high-contrast-mode .st-btn-ad {
   color: var(--st-ink);
 }
 
+/* Grille Débat HOT + Encart Partenariat Chaise Gaming BLACKPINK */
+.st-hot-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 248px;
+  gap: 1.35rem;
+  align-items: start;
+}
+
+.st-chair-ad {
+  background-color: var(--st-surface);
+  color: var(--st-ink);
+  border: 1.5px solid rgba(255, 45, 120, 0.28);
+  border-radius: var(--st-radius-lg);
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  box-shadow: 0 8px 24px -10px rgba(157, 23, 77, 0.16), 0 1px 3px rgba(18, 11, 16, 0.05);
+}
+
+.st-chair-visual {
+  position: relative;
+  border-radius: var(--st-radius-md);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background-color: var(--st-stage);
+  border: 1px solid var(--st-line);
+}
+
+.st-chair-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.st-chair-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.st-btn-chair {
+  width: 100%;
+  justify-content: center;
+  background-color: var(--st-stage);
+  color: var(--st-on-dark);
+  border: 2px solid transparent;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.st-btn-chair:hover {
+  background-color: var(--st-crimson);
+  color: var(--st-on-dark);
+}
+
+body.high-contrast-mode .st-chair-ad {
+  background: #0F0F0F;
+  border: 2px solid #FAFAFA;
+  box-shadow: none;
+}
+
+@media (max-width: 1040px) {
+  .st-hot-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .st-chair-ad {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1rem;
+    align-items: center;
+  }
+  .st-chair-ad .st-ad-header {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 860px) {
   .st-hot-card {
     grid-template-columns: minmax(0, 1fr);
@@ -1040,6 +1118,13 @@ body.high-contrast-mode .st-btn-ad {
   .st-hot-media {
     aspect-ratio: 4 / 3;
     min-height: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .st-chair-ad {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -1764,12 +1849,16 @@ body.high-contrast-mode .st-btn-ad {
 /* Peeking Zeri mascot clean integration */
 .st-zeri-peek {
   position: absolute;
-  bottom: 100%;
+  bottom: calc(100% + 1px);
   right: 20px;
   z-index: 30;
   height: 52px;
   clip-path: inset(-120px -40px 0px -40px);
   line-height: 0;
+}
+
+.st-hot-card .st-zeri-peek {
+  bottom: calc(100% + 1.5px);
 }
 
 .st-zeri-btn {

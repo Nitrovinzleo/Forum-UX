@@ -6,7 +6,7 @@
   <meta name="description" content="K-Pop Discussion Hub Édition Studio : magazine éditorial K-Pop et esport, dossiers Keria (T1) et K/DA Firestarter, lookbook groupes et chronologie des générations.">
   <meta name="theme-color" content="#140810">
   <title>K-Pop Discussion Hub : Édition Studio</title>
-  <link rel="stylesheet" href="/styles/studio.css?v=20261125n">
+  <link rel="stylesheet" href="/styles/studio.css?v=20261125q">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23140810'/%3E%3Cpath d='M16 7v18M7 16h18' stroke='%23FF2D78' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -326,6 +326,7 @@
           </div>
         </div>
 
+        <div class="st-hot-layout">
         <article class="st-hot-card" aria-labelledby="st-manon-hot-title">
           <div class="st-zeri-peek">
             <button type="button" class="st-zeri-btn" data-zeri-msg="QUOI ?! Manon en hiatus juste avant Coachella alors que c'était la n°1 du groupe ?! Tout le monde est choqué !" aria-label="Zeri la mascotte choquée">
@@ -378,6 +379,97 @@
             </div>
           </div>
         </article>
+
+        <!-- Encart Partenariat Déroulant Compact : Collection Razer × BLACKPINK -->
+        <aside class="st-chair-ad" aria-label="Partenariat officiel défilant : collection Razer BLACKPINK Play in Pink">
+          <div class="st-ad-header">
+            <span class="st-ad-badge">Partenariat</span>
+            <span class="st-ad-partner">RAZER × BP</span>
+            <button type="button" id="st-razer-pause-btn" class="st-ad-pause-btn" aria-pressed="false" aria-label="Mettre en pause le défilement Razer BLACKPINK" title="Pause / Lecture">❚❚</button>
+          </div>
+
+          <div class="st-ad-carousel" id="st-razer-carousel" aria-roledescription="carrousel" aria-label="Collection Razer × BLACKPINK Play in Pink">
+            <div class="st-ad-track" id="st-razer-track">
+              <div class="st-ad-slide is-active">
+                <div class="st-chair-visual">
+                  <img src="/assets/images/razer-bp/slide-1.png" alt="Collection Razer × BLACKPINK Play in Pink — Vue complète" loading="lazy">
+                  <span class="st-ad-promo">PLAY IN PINK</span>
+                </div>
+                <div class="st-ad-slide-meta">
+                  <strong class="st-ad-slide-name">Collection complète</strong>
+                  <span class="st-ad-slide-price">Razer × BP</span>
+                </div>
+                <p class="st-ad-slide-sub">Édition limitée officielle noir &amp; rose signature BLACKPINK.</p>
+              </div>
+
+              <div class="st-ad-slide">
+                <div class="st-chair-visual">
+                  <img src="/assets/images/razer-bp/slide-2.png" alt="Chaise gaming Razer Enki X BLACKPINK Edition" loading="lazy">
+                  <span class="st-ad-promo">CHAISE GAMING</span>
+                </div>
+                <div class="st-ad-slide-meta">
+                  <strong class="st-ad-slide-name">Razer Enki X</strong>
+                  <span class="st-ad-slide-price">449 €</span>
+                </div>
+                <p class="st-ad-slide-sub">Soutien lombaire intégré &amp; similicuir bi-ton noir et rose.</p>
+              </div>
+
+              <div class="st-ad-slide">
+                <div class="st-chair-visual">
+                  <img src="/assets/images/razer-bp/slide-3.png" alt="Clavier gaming Razer Ornata V3 TKL BLACKPINK Edition" loading="lazy">
+                  <span class="st-ad-promo">CLAVIER RGB</span>
+                </div>
+                <div class="st-ad-slide-meta">
+                  <strong class="st-ad-slide-name">Ornata V3 TKL</strong>
+                  <span class="st-ad-slide-price">129 €</span>
+                </div>
+                <p class="st-ad-slide-sub">Format compact méca-membrane &amp; rétroéclairage Razer Chroma.</p>
+              </div>
+
+              <div class="st-ad-slide">
+                <div class="st-chair-visual">
+                  <img src="/assets/images/razer-bp/slide-4.png" alt="Souris gaming Razer DeathAdder Essential BLACKPINK Edition" loading="lazy">
+                  <span class="st-ad-promo">SOURIS ESPORT</span>
+                </div>
+                <div class="st-ad-slide-meta">
+                  <strong class="st-ad-slide-name">DeathAdder</strong>
+                  <span class="st-ad-slide-price">59 €</span>
+                </div>
+                <p class="st-ad-slide-sub">Capteur optique 6 400 DPI &amp; ergonomie taillée pour la Faille.</p>
+              </div>
+
+              <div class="st-ad-slide">
+                <div class="st-chair-visual">
+                  <img src="/assets/images/razer-bp/slide-5.png" alt="Tapis de souris Razer Gigantus V2 BLACKPINK Edition" loading="lazy">
+                  <span class="st-ad-promo">TAPIS MEDIUM</span>
+                </div>
+                <div class="st-ad-slide-meta">
+                  <strong class="st-ad-slide-name">Gigantus V2</strong>
+                  <span class="st-ad-slide-price">29 €</span>
+                </div>
+                <p class="st-ad-slide-sub">Tissu micro-tissé haute précision aux couleurs Play in Pink.</p>
+              </div>
+            </div>
+
+            <div class="st-ad-progress" aria-hidden="true">
+              <div class="st-ad-progress-fill" id="st-razer-progress-fill"></div>
+            </div>
+
+            <div class="st-ad-dots" role="group" aria-label="Choisir un produit Razer BLACKPINK">
+              <button type="button" class="st-ad-dot is-active" data-ad-index="0" aria-pressed="true" aria-label="Collection complète">All</button>
+              <button type="button" class="st-ad-dot" data-ad-index="1" aria-pressed="false" aria-label="Chaise Razer Enki X">Enki</button>
+              <button type="button" class="st-ad-dot" data-ad-index="2" aria-pressed="false" aria-label="Clavier Ornata V3">Clav</button>
+              <button type="button" class="st-ad-dot" data-ad-index="3" aria-pressed="false" aria-label="Souris DeathAdder">Mouse</button>
+              <button type="button" class="st-ad-dot" data-ad-index="4" aria-pressed="false" aria-label="Tapis Gigantus V2">Pad</button>
+            </div>
+          </div>
+
+          <a href="https://www.razer.com/fr-fr/collabs/blackpink" target="_blank" rel="noopener noreferrer" class="st-btn st-btn-chair">
+            <span>Voir sur Razer.com</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </aside>
+        </div>
       </div>
     </section>
 
@@ -603,6 +695,6 @@
   </footer>
 
   <script src="/scripts/articles-data.js?v=20261125h"></script>
-  <script src="/scripts/studio.js?v=20261125k"></script>
+  <script src="/scripts/studio.js?v=20261125q"></script>
 </body>
 </html>
