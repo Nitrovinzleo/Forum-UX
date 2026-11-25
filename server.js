@@ -236,7 +236,15 @@ const server = http.createServer((req, res) => {
     reqPath = '/index.html';
   }
 
-  const filePath = path.join(PUBLIC_DIR, reqPath);
+  let filePath = path.join(PUBLIC_DIR, reqPath);
+
+  // Rétrocompatibilité : si une page .html est demandée à la racine, chercher dans /pages/
+  if (reqPath.endsWith('.html') && reqPath !== '/index.html' && !reqPath.startsWith('/pages/')) {
+    const pageCandidate = path.join(PUBLIC_DIR, 'pages', path.basename(reqPath));
+    if (fs.existsSync(pageCandidate)) {
+      filePath = pageCandidate;
+    }
+  }
 
   // Sécurité anti-traversal
   if (!filePath.startsWith(PUBLIC_DIR)) {
@@ -317,9 +325,9 @@ server.listen(PORT, () => {
   console.log(`=======================================================`);
   console.log(` Serveur Fil Rouge B3-IN actif sur http://localhost:${PORT}`);
   console.log(` - Page Accueil   : http://localhost:${PORT}/index.html`);
-  console.log(` - Page Forum     : http://localhost:${PORT}/forum.html`);
-  console.log(` - Page Connexion : http://localhost:${PORT}/login.html`);
-  console.log(` - Page Profil    : http://localhost:${PORT}/profil.html`);
+  console.log(` - Page Forum     : http://localhost:${PORT}/pages/forum.html`);
+  console.log(` - Page Connexion : http://localhost:${PORT}/pages/login.html`);
+  console.log(` - Page Profil    : http://localhost:${PORT}/pages/profil.html`);
   console.log(` - API REST Topic : http://localhost:${PORT}/api/topic`);
   console.log(` - API REST Login : http://localhost:${PORT}/api/login`);
   console.log(`=======================================================`);

@@ -7,8 +7,8 @@ window.KPOP_ARTICLES = {
     title: 'Keria (T1) se lance sur NewJeans, aespa et tente la choré de « Idol » (YOASOBI)',
     summary: "Coéquipier de Faker chez T1 et multiple champion du monde de League of Legends, le « Genius Monster » assume sa passion K-Pop entre reprises de NewJeans et tentatives hilarantes sur « Idol » de YOASOBI.",
     mediaType: 'video',
-    videoSrc: 'assets/videos/keria-dance.mp4',
-    posterSrc: 'assets/images/keria-preview.jpg',
+    videoSrc: '/assets/videos/keria-dance.mp4',
+    posterSrc: '/assets/images/keria-preview.jpg',
     mediaAlt: 'Vidéo de Keria (T1) en train de danser sur des titres K-Pop',
     paragraphs: [
       "Surnommé le « Genius Monster » pour sa créativité mécanique en jeu, Ryu « Keria » Min-seok évolue au poste de support chez T1 aux côtés de Faker. Multiple champion du monde sur League of Legends, il est largement considéré comme le meilleur support de l'histoire de l'esport.",
@@ -23,7 +23,7 @@ window.KPOP_ARTICLES = {
     comments: [
       {
         author: 'Théo « LuxSupport »',
-        avatar: 'assets/images/avatars/theo.jpg',
+        avatar: '/assets/images/avatars/theo.jpg',
         stance: 'Fan LCK',
         time: 'Il y a 1 h',
         votes: 48,
@@ -31,7 +31,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Chloé_Bunnies',
-        avatar: 'assets/images/avatars/chloe.jpg',
+        avatar: '/assets/images/avatars/chloe.jpg',
         stance: 'Fan K-Pop',
         time: 'Il y a 42 min',
         votes: 34,
@@ -39,7 +39,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Sami_KR',
-        avatar: 'assets/images/avatars/sami.jpg',
+        avatar: '/assets/images/avatars/sami.jpg',
         stance: 'Joueur LoL',
         time: 'Il y a 18 min',
         votes: 19,
@@ -47,7 +47,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Yuna_Paris',
-        avatar: 'assets/images/avatars/yuna.jpg',
+        avatar: '/assets/images/avatars/yuna.jpg',
         stance: 'Fan K-Pop',
         time: 'Il y a 9 min',
         votes: 12,
@@ -65,7 +65,7 @@ window.KPOP_ARTICLES = {
     title: 'K/DA FIRESTARTER : vrai coup de maître musical ou pur LARP marketing ?',
     summary: "Réalisé avec le studio Fortiche (Arcane) et porté par MIYEON, SOYEON ((G)I-DLE), Sophie Powers et Mimi Webb, le retour de K/DA divise : vraie K-Pop ou opération de skins ?",
     mediaType: 'image',
-    imageSrc: 'assets/images/kda_firestarter.jpg',
+    imageSrc: '/assets/images/kda_firestarter.jpg',
     mediaAlt: 'Visuel officiel du clip K/DA FIRESTARTER réalisé avec Fortiche',
     paragraphs: [
       "Sorti en octobre 2026 avec le studio d'animation Fortiche, K/DA « FIRESTARTER » a immédiatement monopolisé les tendances gaming et musicales. La recette reprend ce qui a fait exploser POP/STARS et MORE : basses saturées, production trap-pop agressive et direction artistique néon ultra léchée.",
@@ -80,7 +80,7 @@ window.KPOP_ARTICLES = {
     comments: [
       {
         author: 'Nassim_94',
-        avatar: 'assets/images/avatars/nassim.jpg',
+        avatar: '/assets/images/avatars/nassim.jpg',
         stance: 'Team LARP',
         time: 'Il y a 3 h',
         votes: 52,
@@ -88,7 +88,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Mina_Neverland',
-        avatar: 'assets/images/avatars/mina.jpg',
+        avatar: '/assets/images/avatars/mina.jpg',
         stance: 'Team Vraie K-Pop',
         time: 'Il y a 2 h',
         votes: 46,
@@ -96,7 +96,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Lucas_Mix',
-        avatar: 'assets/images/avatars/lucas.jpg',
+        avatar: '/assets/images/avatars/lucas.jpg',
         stance: 'Team LARP',
         time: 'Il y a 1 h',
         votes: 29,
@@ -104,7 +104,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Inès_K',
-        avatar: 'assets/images/avatars/ines.jpg',
+        avatar: '/assets/images/avatars/ines.jpg',
         stance: 'Team Vraie K-Pop',
         time: 'Il y a 25 min',
         votes: 37,
@@ -122,7 +122,7 @@ window.KPOP_ARTICLES = {
     title: 'Hiatus de Manon (KATSEYE) : comment le groupe gère l’absence de sa numéro 1 ?',
     summary: "Annoncé par HYBE × Geffen en février 2026 « pour sa santé », le hiatus de Manon fait exploser les débats chez les EYEKONS : difficile de remplacer celle qui portait l'aura et la viralité n°1 du groupe.",
     mediaType: 'image',
-    imageSrc: 'assets/images/manon-katseye.jpg?v=20261125j',
+    imageSrc: '/assets/images/manon-katseye.jpg?v=20261125j',
     mediaAlt: 'Portrait de Manon Bannerman (KATSEYE)',
     paragraphs: [
       "Depuis The Debut: Dream Academy et la série Netflix Pop Star Academy, Manon Bannerman s'était imposée sans discussion comme la numéro 1 de KATSEYE auprès du grand public : la plus virale sur TikTok, la plus suivie sur les réseaux, et l'aimant visuel qui faisait découvrir le groupe à des millions de personnes hors de la bulle K-Pop.",
@@ -136,7 +136,7 @@ window.KPOP_ARTICLES = {
     comments: [
       {
         author: 'Inès_K',
-        avatar: 'assets/images/avatars/ines.jpg',
+        avatar: '/assets/images/avatars/ines.jpg',
         stance: 'Soutien Manon #1',
         time: 'Il y a 2 h',
         votes: 78,
@@ -144,7 +144,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Yasmine_Danse',
-        avatar: 'assets/images/avatars/yasmine.jpg',
+        avatar: '/assets/images/avatars/yasmine.jpg',
         stance: 'Critique HYBE × Geffen',
         time: 'Il y a 1 h',
         votes: 52,
@@ -152,7 +152,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Chloé_Bunnies',
-        avatar: 'assets/images/avatars/chloe.jpg',
+        avatar: '/assets/images/avatars/chloe.jpg',
         stance: 'Team OT6',
         time: 'Il y a 28 min',
         votes: 34,
@@ -169,7 +169,7 @@ window.KPOP_ARTICLES = {
     title: 'Pourquoi les titres K-Pop passent sous les 2 min 30 (et où sont passés les bridges ?)',
     summary: "Entre 2015 et 2026, la durée moyenne d'un single K-Pop a chuté de près de 50 secondes. En cause : le streaming en boucle et les refrains calibrés pour TikTok.",
     mediaType: 'image',
-    imageSrc: 'assets/images/newjeans-real.jpg',
+    imageSrc: '/assets/images/newjeans-real.jpg',
     mediaAlt: 'Membres de NewJeans illustrant la nouvelle vague des titres courts K-Pop',
     paragraphs: [
       "En 2G et 3G, un single K-Pop dépassait couramment 3 min 30 avec un pont vocal dramatique suivi d'un dernier refrain explosif (pensez à EXO, SHINee ou TWICE). Depuis l'explosion de Spotify et des formats courts, de nombreux singles 4G et 5G tombent autour de 2 min 20.",
@@ -180,7 +180,7 @@ window.KPOP_ARTICLES = {
     comments: [
       {
         author: 'Karim_Audio',
-        avatar: 'assets/images/avatars/karim.jpg',
+        avatar: '/assets/images/avatars/karim.jpg',
         stance: 'Team Bridges 3G',
         time: 'Il y a 6 h',
         votes: 41,
@@ -188,7 +188,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Noa_5G',
-        avatar: 'assets/images/avatars/noa.jpg',
+        avatar: '/assets/images/avatars/noa.jpg',
         stance: 'Team Format Court',
         time: 'Il y a 4 h',
         votes: 23,
@@ -196,7 +196,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Camille_M',
-        avatar: 'assets/images/avatars/camille.jpg',
+        avatar: '/assets/images/avatars/camille.jpg',
         stance: 'Team Bridges 3G',
         time: 'Il y a 2 h',
         votes: 17,
@@ -213,7 +213,7 @@ window.KPOP_ARTICLES = {
     title: '60 000 lightsticks synchronisés au millimètre : comment fonctionne un océan de concert ?',
     summary: "Chaque billet de concert associe votre numéro de siège à votre bâton lumineux en Bluetooth. La régie transforme ainsi tout le stade en écran LED vivant.",
     mediaType: 'image',
-    imageSrc: 'assets/images/lightstick-ocean-real.jpg',
+    imageSrc: '/assets/images/lightstick-ocean-real.jpg',
     mediaAlt: 'Stade illuminé par un océan de lightsticks synchronisés',
     paragraphs: [
       "Inventés au milieu des années 2000 avec le célèbre Bang Bong de BIGBANG, les lightsticks sont passés de simples lampes colorées à de véritables pixels connectés. Avant d'entrer dans le stade, chaque fan appaire son bâton sur l'application officielle en scannant son siège.",
@@ -224,7 +224,7 @@ window.KPOP_ARTICLES = {
     comments: [
       {
         author: 'Léa_ARMY',
-        avatar: 'assets/images/avatars/lea.jpg',
+        avatar: '/assets/images/avatars/lea.jpg',
         stance: 'Déjà vécu en stade',
         time: 'Il y a 1 j',
         votes: 39,
@@ -232,7 +232,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Hugo_Tech',
-        avatar: 'assets/images/avatars/hugo.jpg',
+        avatar: '/assets/images/avatars/hugo.jpg',
         stance: 'Déjà vécu en stade',
         time: 'Il y a 18 h',
         votes: 28,
@@ -240,7 +240,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Manon_ONCE',
-        avatar: 'assets/images/avatars/manon.jpg',
+        avatar: '/assets/images/avatars/manon.jpg',
         stance: 'Premier concert bientôt',
         time: 'Il y a 10 h',
         votes: 14,
@@ -257,7 +257,7 @@ window.KPOP_ARTICLES = {
     title: 'Fancams 4K et « Ending Fairy » : comment une caméra a changé les chorégraphies',
     summary: "À la fin de chaque passage TV coréen, la caméra zoome 5 secondes sur un membre essoufflé. Ce plan fixe est devenu un véritable art viral.",
     mediaType: 'image',
-    imageSrc: 'assets/images/blackpink-real.jpg',
+    imageSrc: '/assets/images/blackpink-real.jpg',
     mediaAlt: 'Groupe BLACKPINK sur scène face aux caméras',
     paragraphs: [
       "Né dans les émissions musicales coréennes (Music Bank, Inkigayo, M Countdown), le concept d'« Ending Fairy » consiste à fixer un gros plan sur un membre du groupe pendant les dernières secondes d'une performance live.",
@@ -268,7 +268,7 @@ window.KPOP_ARTICLES = {
     comments: [
       {
         author: 'Yasmine_Danse',
-        avatar: 'assets/images/avatars/yasmine.jpg',
+        avatar: '/assets/images/avatars/yasmine.jpg',
         stance: 'Fan de Fancams',
         time: 'Il y a 2 j',
         votes: 31,
@@ -276,7 +276,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Tom_SKZ',
-        avatar: 'assets/images/avatars/tom.jpg',
+        avatar: '/assets/images/avatars/tom.jpg',
         stance: 'Team Plan Large',
         time: 'Il y a 1 j',
         votes: 22,
@@ -284,7 +284,7 @@ window.KPOP_ARTICLES = {
       },
       {
         author: 'Elena_K',
-        avatar: 'assets/images/avatars/elena.jpg',
+        avatar: '/assets/images/avatars/elena.jpg',
         stance: 'Fan de Fancams',
         time: 'Il y a 15 h',
         votes: 11,

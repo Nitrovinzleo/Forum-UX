@@ -3,7 +3,7 @@
 /* ==========================================================================
    K-POP DISCUSSION HUB - FEUILLE DE STYLE HAUTE EN COULEURS (ROSE VIBRANT K-POP)
    Conformité stricte : RGAA 4.1.2 & WCAG 2.2 Niveau AAA (Contraste >= 7:1)
-   Design éditorial soigné (Hallmark × Apple HIG × K-Pop Glam)
+   Design éditorial K-Pop & accessibilité renforcée
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -2232,7 +2232,7 @@ body.high-contrast-mode .sort-select {
 }
 
 /* --------------------------------------------------------------------------
-   SECTION TENDANCES & FILS DE COMMENTAIRES (HALLMARK × APPLE HIG × WCAG AAA)
+   SECTION TENDANCES & FILS DE COMMENTAIRES (WCAG AAA)
    -------------------------------------------------------------------------- */
 .trends-section {
   margin-top: 3.75rem;

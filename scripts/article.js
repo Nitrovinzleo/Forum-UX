@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (session && session.name && navUserItem) {
     navUserItem.innerHTML = `
       <div style="display: inline-flex; align-items: center; gap: 0.45rem;">
-        <a href="profil.html" class="st-nav-link st-nav-cta" aria-label="Accéder au profil de ${esc(session.name)}">${esc(session.name)}</a>
+        <a href="/pages/profil.html" class="st-nav-link st-nav-cta" aria-label="Accéder au profil de ${esc(session.name)}">${esc(session.name)}</a>
         <button type="button" id="st-nav-logout" class="st-btn st-btn-ghost" style="min-height: 40px; padding: 0.3rem 0.7rem; font-size: 0.825rem;">Quitter</button>
       </div>
     `;
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mediaSlot.innerHTML = `
       <video id="article-main-video" controls playsinline preload="metadata" poster="${esc(article.posterSrc)}" aria-label="${esc(article.mediaAlt)}">
         <source src="${esc(article.videoSrc)}" type="video/mp4">
-        <track kind="captions" srclang="fr" label="Français" src="assets/videos/keria-dance.vtt" default>
+        <track kind="captions" srclang="fr" label="Français" src="/assets/videos/keria-dance.vtt" default>
         Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
       </video>
       <button type="button" class="st-video-play-overlay" id="article-video-overlay" aria-label="Lancer la vidéo">
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <li class="st-comment">
           <div class="st-comment-top">
             <span class="st-comment-who">
-              <img src="${esc(c.avatar || 'assets/images/avatars/default.jpg')}" alt="" class="st-comment-avatar" aria-hidden="true">
+              <img src="${esc(c.avatar || '/assets/images/avatars/default.jpg')}" alt="" class="st-comment-avatar" aria-hidden="true">
               <span>${esc(c.author)}</span>
               <span class="st-stance ${isLarp ? 'st-stance-larp' : ''}">${esc(c.stance)}</span>
             </span>
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
         articleId: article.id,
         articleLabel: article.title,
         author: session.name,
-        avatar: session.avatar || 'assets/images/avatars/minji.jpg',
+        avatar: session.avatar || '/assets/images/avatars/minji.jpg',
         stance,
         message: msg,
         votes: 0,
@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3 style="margin: 0 0 0.25rem 0; font-family: var(--font-display); font-size: 1.2rem;">Connectez-vous pour participer au débat</h3>
           <p style="margin: 0; font-size: 0.9rem; color: var(--st-ink-muted);">La publication de réponses est réservée aux membres connectés.</p>
         </div>
-        <a href="login.html" class="st-btn st-btn-primary">
+        <a href="/pages/login.html" class="st-btn st-btn-primary">
           <span>Se connecter pour répondre</span>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -306,13 +306,13 @@ document.addEventListener('DOMContentLoaded', () => {
     return `
       <article class="st-look-card">
         <div class="st-look-media">
-          <a href="article.html?id=${esc(a.id)}" aria-label="Lire : ${esc(a.title)}">
+          <a href="/pages/article.html?id=${esc(a.id)}" aria-label="Lire : ${esc(a.title)}">
             <img src="${esc(thumb)}" alt="${esc(a.mediaAlt)}" loading="lazy">
           </a>
           <span class="st-gen-stamp">${esc(a.tag)}</span>
         </div>
         <div class="st-look-body">
-          <h3 class="st-look-title"><a href="article.html?id=${esc(a.id)}">${esc(a.title)}</a></h3>
+          <h3 class="st-look-title"><a href="/pages/article.html?id=${esc(a.id)}">${esc(a.title)}</a></h3>
           <p class="st-look-sub">${totalCount} réponses</p>
           <p class="st-look-desc">${esc(a.summary)}</p>
         </div>

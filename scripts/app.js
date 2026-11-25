@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const user = JSON.parse(sessionRaw);
         navUserItem.innerHTML = `
           <div style="display: inline-flex; align-items: center; gap: 0.45rem;">
-            <a href="profil.html" class="st-nav-link st-nav-cta" aria-label="Accéder au profil de ${escapeHtml(user.name)}">
+            <a href="/pages/profil.html" class="st-nav-link st-nav-cta" aria-label="Accéder au profil de ${escapeHtml(user.name)}">
               <span>${escapeHtml(user.name)}</span>
             </a>
             <button type="button" id="btn-nav-logout" class="st-btn st-btn-ghost" style="min-height: 40px; padding: 0.3rem 0.7rem; font-size: 0.825rem;" aria-label="Se déconnecter">
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateNavbarSession();
 
   // ==========================================================================
-  // 3. LOGIQUE DE LA PAGE DE CONNEXION (login.html)
+  // 3. LOGIQUE DE LA PAGE DE CONNEXION (/pages/login.html)
   // ==========================================================================
   const loginForm = document.getElementById('login-form');
   const inputLoginId = document.getElementById('input-login-id');
@@ -260,12 +260,12 @@ document.addEventListener('DOMContentLoaded', () => {
     announceToScreenReader(`Connexion réussie. Bienvenue ${userName}. Redirection en cours.`);
 
     setTimeout(() => {
-      window.location.href = 'index.html';
+      window.location.href = '/index.html';
     }, 700);
   }
 
   // ==========================================================================
-  // 4. LOGIQUE DU FORUM (forum.html)
+  // 4. LOGIQUE DU FORUM (/pages/forum.html)
   // ==========================================================================
   const replyForm = document.getElementById('reply-form');
   const inputAuthorName = document.getElementById('input-author-name');
@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p style="margin: 0 0 0.25rem 0; font-weight: 700;">Connectez-vous pour publier une réponse</p>
             <p style="margin: 0; font-size: 0.9rem; color: var(--st-ink-muted, #52434C);">La participation au forum est réservée aux membres connectés.</p>
           </div>
-          <a href="login.html" class="st-btn st-btn-primary">Se connecter pour parler</a>
+          <a href="/pages/login.html" class="st-btn st-btn-primary">Se connecter pour parler</a>
         </div>
       `;
     } else {
@@ -529,7 +529,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 5. LOGIQUE DE LA PAGE PROFIL (profil.html)
+  // 5. LOGIQUE DE LA PAGE PROFIL (/pages/profil.html)
   // ==========================================================================
   const profileDisplayName = document.getElementById('profile-display-name');
   const profileDisplayEmail = document.getElementById('profile-display-email');
@@ -584,7 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (confirm('Voulez-vous vraiment vous déconnecter de votre compte membre ?')) {
           localStorage.removeItem('kpop_user_session');
           announceToScreenReader('Vous avez été déconnecté. Redirection vers la page de connexion.');
-          window.location.href = 'login.html';
+          window.location.href = '/pages/login.html';
         }
       });
     }
@@ -873,7 +873,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       localStorage.setItem('kpop_user_session', JSON.stringify(newSession));
       localStorage.setItem(favGroupsKey, JSON.stringify([bias]));
-      window.location.href = 'profil.html';
+      window.location.href = '/pages/profil.html';
     });
   }
 
@@ -936,7 +936,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
               avatarImg.hidden = true;
               avatarEl.hidden = false;
-              if (avatarPreviewImg) avatarPreviewImg.src = 'assets/images/avatars/minji.jpg';
+              if (avatarPreviewImg) avatarPreviewImg.src = '/assets/images/avatars/minji.jpg';
             }
           }
         }
@@ -975,7 +975,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btnRemoveAvatar.addEventListener('click', () => {
         pendingAvatarDataUrl = null;
         if (avatarFileInput) avatarFileInput.value = '';
-        if (avatarPreviewImg) avatarPreviewImg.src = 'assets/images/avatars/minji.jpg';
+        if (avatarPreviewImg) avatarPreviewImg.src = '/assets/images/avatars/minji.jpg';
       });
     }
 
@@ -1016,7 +1016,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Groupes favoris & articles sauvegardés sur profil.html
+  // Groupes favoris & articles sauvegardés sur /pages/profil.html
   const favGroupsContainer = document.getElementById('fav-groups-container');
   const savedArticlesContainer = document.getElementById('profile-saved-articles');
   const activityListContainer = document.getElementById('profile-activity-list');
@@ -1061,7 +1061,7 @@ document.addEventListener('DOMContentLoaded', () => {
         savedArticlesContainer.innerHTML = list.map((item) => `
           <div class="activity-card" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
             <div>
-              <a href="index.html#tendances-section" style="font-weight: 700; color: var(--color-link); text-decoration: none;">${escapeHtml(item.title)}</a>
+              <a href="/index.html#tendances-section" style="font-weight: 700; color: var(--color-link); text-decoration: none;">${escapeHtml(item.title)}</a>
               <div style="font-size: 0.8rem; color: var(--color-text-muted);">Sauvegardé le ${escapeHtml(item.savedAt || '')}</div>
             </div>
             <button type="button" class="btn-bookmark" data-remove-saved="${escapeHtml(item.id)}" aria-label="Retirer ${escapeHtml(item.title)} des favoris">Retirer</button>

@@ -1,5 +1,4 @@
-/* hallmark: v2.0.0 | theme: seoul-editorial-magazine | genre: editorial | floor: strict */
-/* critique: Asymmetric print-magazine K-Pop edition with warm paper, obsidian stage, Bricolage Grotesque display & live poll/lookbook mechanics. */
+/* K-Pop Discussion Hub — Feuille de style Édition Studio (RGAA 4.1.2 / WCAG 2.2 AAA) */
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
@@ -404,7 +403,7 @@ body {
   }
 }
 
-/* Encart Publicitaire Latéral — Édition Studio × Apple HIG (Contour irisé rose/rouge subtil + paillettes fines + reflet) */
+/* Encart Publicitaire Latéral — Boutique Lightsticks */
 @keyframes stRgbBorder {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
@@ -1311,7 +1310,7 @@ body.high-contrast-mode .st-btn-ad {
 }
 
 /* --------------------------------------------------------------------------
-   BUTTONS (APPLE HIG 44PX+ HIT TARGETS & PRESS FEEDBACK)
+   BUTTONS (44PX+ HIT TARGETS & PRESS FEEDBACK)
    -------------------------------------------------------------------------- */
 .st-btn {
   min-height: 44px;

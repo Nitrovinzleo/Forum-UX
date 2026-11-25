@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnKpop) btnKpop.addEventListener('click', () => votePoll('kpop'));
   if (btnLarp) btnLarp.addEventListener('click', () => votePoll('larp'));
 
-  // 3. Sauvegarde Favoris synchronisée avec profil.html
+  // 3. Sauvegarde Favoris synchronisée avec /pages/profil.html
   const savedKey = 'kpop_saved_articles';
   function getSaved() {
     try { return JSON.parse(localStorage.getItem(savedKey) || '[]'); } catch { return []; }
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (session && session.name && navUserItem) {
     navUserItem.innerHTML = `
       <div style="display: inline-flex; align-items: center; gap: 0.45rem;">
-        <a href="profil.html" class="st-nav-link st-nav-cta" aria-label="Accéder au profil de ${esc(session.name)}">${esc(session.name)}</a>
+        <a href="/pages/profil.html" class="st-nav-link st-nav-cta" aria-label="Accéder au profil de ${esc(session.name)}">${esc(session.name)}</a>
         <button type="button" id="st-nav-logout" class="st-btn st-btn-ghost" style="min-height: 40px; padding: 0.3rem 0.7rem; font-size: 0.825rem;">Quitter</button>
       </div>
     `;
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const allComments = [...a.comments, ...userForArticle];
       const preview = allComments.slice(0, 2); // MAX 2 COMMENTAIRES AFFICHÉS
       const remaining = Math.max(0, allComments.length - 2);
-      const replyHref = session && session.name ? `article.html?id=${esc(a.id)}#article-reply-zone` : 'login.html';
+      const replyHref = session && session.name ? `/pages/article.html?id=${esc(a.id)}#article-reply-zone` : '/pages/login.html';
       const replyLabel = session && session.name ? 'Répondre' : 'Se connecter pour parler';
 
       return `
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span>${allComments.length} réponses</span>
               </div>
               <h3 style="margin: 0; font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; line-height: 1.25;">
-                <a href="article.html?id=${esc(a.id)}" style="color: inherit; text-decoration: none;">${esc(a.title)}</a>
+                <a href="/pages/article.html?id=${esc(a.id)}" style="color: inherit; text-decoration: none;">${esc(a.title)}</a>
               </h3>
               <p style="margin: 0.45rem 0 0 0; font-size: 0.875rem; color: var(--st-ink-muted); line-height: 1.5;">${esc(a.summary)}</p>
             </div>
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li class="st-comment">
                   <div class="st-comment-top">
                     <span class="st-comment-who">
-                      <img src="${esc(c.avatar || 'assets/images/avatars/default.jpg')}" alt="" class="st-comment-avatar" aria-hidden="true">
+                      <img src="${esc(c.avatar || '/assets/images/avatars/default.jpg')}" alt="" class="st-comment-avatar" aria-hidden="true">
                       <span>${esc(c.author)}</span>
                       <span class="st-stance ${isLarp ? 'st-stance-larp' : ''}">${esc(c.stance)}</span>
                     </span>
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </ul>
 
           <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--st-line); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem;">
-            <a href="article.html?id=${esc(a.id)}" class="st-btn st-btn-primary">
+            <a href="/pages/article.html?id=${esc(a.id)}" class="st-btn st-btn-primary">
               <span>${remaining > 0 ? `Voir l'article & les +${remaining} autres réponses` : "Lire l'article & le fil complet"}</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pauseBtn = document.getElementById('st-ad-pause-btn');
     const DURATION = 3000;
     let current = 0;
-    let paused = false;
+    let paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let hovered = false;
     let timer = null;
 
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
       slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
       dots.forEach((d, i) => {
         d.classList.toggle('is-active', i === current);
-        d.setAttribute('aria-selected', String(i === current));
+        d.setAttribute('aria-pressed', String(i === current));
       });
       restartProgress();
     }

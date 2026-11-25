@@ -6,7 +6,7 @@
   <meta name="description" content="Tableau de bord membre K-Pop Discussion Hub : édition du profil, groupes suivis, favoris, commentaires et export RGPD.">
   <meta name="theme-color" content="#140810">
   <title>Mon Profil Membre | K-Pop Discussion Hub</title>
-  <link rel="stylesheet" href="studio.css?v=20261121l">
+  <link rel="stylesheet" href="/styles/studio.css?v=20261121l">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23140810'/%3E%3Cpath d='M16 7v18M7 16h18' stroke='%23FF2D78' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -37,17 +37,17 @@
   <!-- Masthead Studio sticky -->
   <header class="st-header" role="banner">
     <div class="st-container st-header-inner">
-      <a href="index.html" class="st-masthead" aria-label="K-Pop Discussion Hub">
+      <a href="/index.html" class="st-masthead" aria-label="K-Pop Discussion Hub">
         <span class="st-masthead-wordmark">K-POP HUB</span>
         <span class="st-masthead-edition">/ SEOUL EDITION</span>
       </a>
       <nav aria-label="Navigation principale">
         <ul class="st-nav-list" role="list">
-          <li><a href="index.html" class="st-nav-link">Accueil</a></li>
-          <li><a href="index.html#debats-live" class="st-nav-link">Débats live</a></li>
-          <li><a href="index.html#lookbook" class="st-nav-link">Groupes</a></li>
-          <li><a href="forum.html" class="st-nav-link">Forum</a></li>
-          <li id="nav-user-item"><a href="login.html" id="nav-login-link" class="st-nav-link st-nav-cta">Connexion</a></li>
+          <li><a href="/index.html" class="st-nav-link">Accueil</a></li>
+          <li><a href="/index.html#debats-live" class="st-nav-link">Débats live</a></li>
+          <li><a href="/index.html#lookbook" class="st-nav-link">Groupes</a></li>
+          <li><a href="/pages/forum.html" class="st-nav-link">Forum</a></li>
+          <li id="nav-user-item"><a href="/pages/login.html" id="nav-login-link" class="st-nav-link st-nav-cta">Connexion</a></li>
         </ul>
       </nav>
     </div>
@@ -59,7 +59,7 @@
 
       <nav class="st-breadcrumb" aria-label="Fil d'Ariane">
         <ol role="list">
-          <li><a href="index.html">Accueil</a></li>
+          <li><a href="/index.html">Accueil</a></li>
           <li aria-hidden="true">/</li>
           <li aria-current="page">Mon Profil Membre</li>
         </ol>
@@ -85,7 +85,7 @@
           <div class="st-card">
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
               <div class="st-profile-avatar" style="overflow: hidden; position: relative;" aria-hidden="true">
-                <img id="profile-avatar-img" src="assets/images/avatars/minji.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                <img id="profile-avatar-img" src="/assets/images/avatars/minji.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                 <span id="profile-avatar-letter" hidden>M</span>
               </div>
               <div>
@@ -126,7 +126,7 @@
               <div class="form-group" style="margin-bottom: 0.85rem;">
                 <label for="edit-avatar-file" class="form-label">Photo de profil</label>
                 <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-                  <img id="edit-avatar-preview" src="assets/images/avatars/minji.jpg" alt="Aperçu de la photo de profil" class="st-comment-avatar" style="width: 48px; height: 48px;">
+                  <img id="edit-avatar-preview" src="/assets/images/avatars/minji.jpg" alt="Aperçu de la photo de profil" class="st-comment-avatar" style="width: 48px; height: 48px;">
                   <button type="button" id="btn-remove-avatar" class="st-btn st-btn-ghost" style="min-height: 36px; padding: 0.25rem 0.65rem; font-size: 0.8rem;">Retirer la photo</button>
                 </div>
                 <input type="file" id="edit-avatar-file" accept="image/png,image/jpeg,image/webp,image/gif" class="form-input" style="padding: 0.45rem 0.65rem;">
@@ -259,18 +259,18 @@
         <div>
           <strong style="font-size: 0.9rem;">Navigation</strong>
           <ul class="st-footer-links" role="list">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="forum.html">Forum communautaire</a></li>
-            <li><a href="login.html">Connexion &amp; Inscription</a></li>
+            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/pages/forum.html">Forum communautaire</a></li>
+            <li><a href="/pages/login.html">Connexion &amp; Inscription</a></li>
           </ul>
         </div>
         <div>
           <strong style="font-size: 0.9rem;">Fiches Groupes</strong>
           <ul class="st-footer-links" role="list">
-            <li><a href="bts.html">BTS (3G)</a></li>
-            <li><a href="blackpink.html">BLACKPINK (3G)</a></li>
-            <li><a href="straykids.html">Stray Kids (4G)</a></li>
-            <li><a href="newjeans.html">NewJeans (4G / 5G)</a></li>
+            <li><a href="/pages/bts.html">BTS (3G)</a></li>
+            <li><a href="/pages/blackpink.html">BLACKPINK (3G)</a></li>
+            <li><a href="/pages/straykids.html">Stray Kids (4G)</a></li>
+            <li><a href="/pages/newjeans.html">NewJeans (4G / 5G)</a></li>
           </ul>
         </div>
       </div>
@@ -278,6 +278,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20261121k" defer></script>
+  <script src="/scripts/app.js?v=20261121k" defer></script>
 </body>
 </html>
