@@ -255,32 +255,32 @@ document.addEventListener('DOMContentLoaded', () => {
     vid.addEventListener('ended', () => { overlay.hidden = false; });
   });
 
-  // 9. Bulle de dialogue BD ancrée directement sur Bobi au clic
+  // 9. Bulle de dialogue BD ancrée directement sur Zeri au clic
   let activeBubble = null;
-  function closeBobiBubble() {
+  function closeZeriBubble() {
     if (activeBubble) {
       activeBubble.remove();
       activeBubble = null;
     }
   }
 
-  document.querySelectorAll('.st-bobi-btn').forEach((btn) => {
+  document.querySelectorAll('.st-zeri-btn').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-      const wasSame = activeBubble && activeBubble.dataset.owner === btn.dataset.bobiMsg;
-      closeBobiBubble();
+      const wasSame = activeBubble && activeBubble.dataset.owner === btn.dataset.zeriMsg;
+      closeZeriBubble();
       if (wasSame) return;
 
       const bubble = document.createElement('div');
       bubble.className = 'speech-bubble';
       bubble.setAttribute('role', 'status');
-      bubble.dataset.owner = btn.dataset.bobiMsg || '';
+      bubble.dataset.owner = btn.dataset.zeriMsg || '';
       bubble.innerHTML = `
         <div class="speech-bubble-header">
-          <span class="speech-bubble-title">Bobi</span>
+          <span class="speech-bubble-title">Zeri</span>
           <button type="button" class="btn-close-bubble" aria-label="Fermer la bulle">×</button>
         </div>
-        <p class="speech-bubble-text">${esc(btn.dataset.bobiMsg)}</p>
+        <p class="speech-bubble-text">${esc(btn.dataset.zeriMsg)}</p>
       `;
       document.body.appendChild(bubble);
 
@@ -293,14 +293,14 @@ document.addEventListener('DOMContentLoaded', () => {
       bubble.style.left = `${left}px`;
       bubble.style.top = `${top}px`;
 
-      bubble.querySelector('.btn-close-bubble').addEventListener('click', closeBobiBubble);
+      bubble.querySelector('.btn-close-bubble').addEventListener('click', closeZeriBubble);
       activeBubble = bubble;
     });
   });
 
   document.addEventListener('click', (e) => {
-    if (activeBubble && !e.target.closest('.speech-bubble') && !e.target.closest('.st-bobi-btn')) {
-      closeBobiBubble();
+    if (activeBubble && !e.target.closest('.speech-bubble') && !e.target.closest('.st-zeri-btn')) {
+      closeZeriBubble();
     }
   });
 });

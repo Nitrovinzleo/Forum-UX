@@ -620,12 +620,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const bubble = document.createElement('div');
     bubble.className = 'speech-bubble';
     bubble.setAttribute('role', 'dialog');
-    bubble.setAttribute('aria-label', quoteTitle || 'Message de Bobi la mascotte');
+    bubble.setAttribute('aria-label', quoteTitle || 'Message de Zeri la mascotte');
     bubble.dataset.placement = placement;
 
     bubble.innerHTML = `
       <div class="speech-bubble-header">
-        <span>✨ ${escapeHtml(quoteTitle || 'Bobi la Mascotte')}</span>
+        <span>✨ ${escapeHtml(quoteTitle || 'Zeri la Mascotte')}</span>
         <button type="button" class="speech-bubble-close" aria-label="Fermer la bulle">×</button>
       </div>
       <p class="speech-bubble-text">${escapeHtml(quoteText)}</p>
@@ -643,7 +643,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    announceToScreenReader(`Bobi la mascotte dit : ${quoteText}`);
+    announceToScreenReader(`Zeri la mascotte dit : ${quoteText}`);
   }
 
   // Click handler pour tous les déclencheurs de mascotte en coin / peeking

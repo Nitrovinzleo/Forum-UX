@@ -24,7 +24,7 @@ Puis ouvrir http://localhost:8080/index.html.
 - **Accueil** (`index.html`) : Hero éditorial, Tendances & Facts (dossiers Keria T1 avec vidéo sous-titrée WebVTT, sondage live K/DA *FIRESTARTER*), Lookbook groupes et chronologie 2G → 5G.
 - **Article détaillé** (`article.html`) : Lecture complète, vidéo HTML5 sous-titrée, sondage interactif et fil de commentaires réservé aux membres.
 - **Forum communautaire** (`forum.html`) : Tri, votes, réponses connectées et profils illustrés.
-- **Connexion & Inscription** (`login.html`) : Authentification membre, accès rapide de démonstration et mascotte interactive **Bobi**.
+- **Connexion & Inscription** (`login.html`) : Authentification membre, accès rapide de démonstration et mascotte interactive **Zeri**.
 - **Profil Membre** (`profil.html`) : Upload et recadrage d'avatar local (`256×256`), favoris, préférences d'accessibilité et export RGPD.
 - **Fiches Groupes & Culture** : `bts.html`, `blackpink.html`, `straykids.html`, `twice.html`, `newjeans.html` et `lightsticks.html`.
 
@@ -37,7 +37,7 @@ Puis ouvrir http://localhost:8080/index.html.
 
 ## Équipe
 
-- **Nitrovinzleo** — Architecture, mascotte Bobi, finalisation UI & accessibilité
+- **Nitrovinzleo** — Architecture, mascotte Zeri, finalisation UI & accessibilité
 - **Matt12sw** — Serveur Node.js/API REST, design système Studio & dossiers Tendances
 - **NikolaTDRV** — Fiches groupes 3G/4G/5G, dossier Lightsticks & espace Membre
 - **TiboBientotInShape** — Documentation, support de soutenance & Forum communautaire

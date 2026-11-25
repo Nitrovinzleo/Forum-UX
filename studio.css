@@ -1283,8 +1283,8 @@ body.high-contrast-mode .st-btn-ad {
   border-color: var(--st-crimson);
 }
 
-/* Peeking Bobi mascot clean integration */
-.st-bobi-peek {
+/* Peeking Zeri mascot clean integration */
+.st-zeri-peek {
   position: absolute;
   top: -50px;
   right: 20px;
@@ -1294,7 +1294,7 @@ body.high-contrast-mode .st-btn-ad {
   line-height: 0;
 }
 
-.st-bobi-btn {
+.st-zeri-btn {
   background: transparent;
   border: none;
   padding: 0;
@@ -1302,19 +1302,19 @@ body.high-contrast-mode .st-btn-ad {
   line-height: 0;
 }
 
-.st-bobi-img {
+.st-zeri-img {
   width: 64px;
   height: auto;
   display: block;
   transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.st-bobi-btn:hover .st-bobi-img,
-.st-bobi-btn:focus-visible .st-bobi-img {
+.st-zeri-btn:hover .st-zeri-img,
+.st-zeri-btn:focus-visible .st-zeri-img {
   transform: translateY(-8px);
 }
 
-.st-bobi-toast {
+.st-zeri-toast {
   position: fixed;
   bottom: 1.25rem;
   right: 1.25rem;
@@ -1329,7 +1329,7 @@ body.high-contrast-mode .st-btn-ad {
   font-size: 0.875rem;
 }
 
-/* Bulle de dialogue BD ancrée directement sur Bobi */
+/* Bulle de dialogue BD ancrée directement sur Zeri */
 .speech-bubble {
   position: fixed;
   z-index: 9999;
