@@ -359,6 +359,10 @@ body {
   color: var(--st-ink-muted);
 }
 
+.st-cover-section .st-container {
+  max-width: 1460px;
+}
+
 .st-cover-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
@@ -366,10 +370,199 @@ body {
   align-items: stretch;
 }
 
+.st-cover-grid-with-ad {
+  grid-template-columns: 235px minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 1140px) {
+  .st-cover-grid-with-ad {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  }
+  .st-ad-sidebar {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .st-ad-sidebar .st-ad-header {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 920px) {
-  .st-cover-grid {
+  .st-cover-grid,
+  .st-cover-grid-with-ad {
     grid-template-columns: minmax(0, 1fr);
   }
+  .st-ad-sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Encart Publicitaire Latéral — Boutique Lightsticks */
+.st-ad-sidebar {
+  background: linear-gradient(165deg, #1A0B15 0%, #140810 58%, #240D1B 100%);
+  color: var(--st-on-dark);
+  border: 1px solid rgba(255, 45, 120, 0.32);
+  border-radius: var(--st-radius-lg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  box-shadow: var(--st-shadow-md);
+  position: relative;
+}
+
+.st-ad-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.st-ad-badge {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--st-on-dark);
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.st-ad-partner {
+  color: var(--st-gold);
+  font-weight: 700;
+}
+
+.st-ad-visual {
+  position: relative;
+  border-radius: var(--st-radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--st-line-dark);
+}
+
+.st-ad-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.st-ad-promo {
+  position: absolute;
+  left: 0.55rem;
+  bottom: 0.55rem;
+  background: var(--st-gold);
+  color: #140810;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.22rem 0.55rem;
+  border-radius: 6px;
+}
+
+.st-ad-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.st-ad-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--st-on-dark);
+}
+
+.st-ad-desc {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--st-on-dark-muted);
+}
+
+.st-ad-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.65rem 0;
+  border-top: 1px solid var(--st-line-dark);
+  border-bottom: 1px solid var(--st-line-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+}
+
+.st-ad-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.st-ad-item-name {
+  color: var(--st-on-dark);
+  font-weight: 600;
+}
+
+.st-ad-item-price {
+  font-family: var(--font-mono);
+  color: var(--st-gold);
+  font-weight: 700;
+}
+
+.st-ad-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: var(--st-radius-sm);
+  border: 1px dashed rgba(253, 224, 71, 0.55);
+  background: rgba(253, 224, 71, 0.08);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--st-on-dark);
+}
+
+.st-ad-code strong {
+  color: var(--st-gold);
+  letter-spacing: 0.06em;
+}
+
+.st-btn-ad {
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--st-gold);
+  color: #140810;
+  border: 2px solid transparent;
+  font-weight: 800;
+}
+
+.st-btn-ad:hover {
+  background-color: #FEF08A;
+  color: #140810;
+}
+
+body.high-contrast-mode .st-ad-sidebar {
+  background: #050505;
+  border: 2px solid #FAFAFA;
+}
+
+body.high-contrast-mode .st-btn-ad {
+  background-color: #FDE047;
+  color: #050505;
+  border-color: #FAFAFA;
 }
 
 .st-feature-card {
