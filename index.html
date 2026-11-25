@@ -6,7 +6,7 @@
   <meta name="description" content="K-Pop Discussion Hub Édition Studio : magazine éditorial K-Pop et esport, dossiers Keria (T1) et K/DA Firestarter, lookbook groupes et chronologie des générations.">
   <meta name="theme-color" content="#140810">
   <title>K-Pop Discussion Hub : Édition Studio</title>
-  <link rel="stylesheet" href="studio.css?v=20261125a">
+  <link rel="stylesheet" href="studio.css?v=20261125n">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23140810'/%3E%3Cpath d='M16 7v18M7 16h18' stroke='%23FF2D78' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -72,50 +72,125 @@
 
         <div class="st-cover-grid st-cover-grid-with-ad">
 
-          <!-- Encart Publicitaire Latéral : Boutique Lightsticks -->
-          <aside class="st-ad-sidebar" aria-label="Publicité partenaire : boutique de lightsticks officiels">
+          <!-- Encart Publicitaire Latéral Déroulant : Boutique Lightsticks (Style Édition Studio / Apple HIG) -->
+          <aside class="st-ad-sidebar" aria-label="Publicité partenaire défilante : boutique de lightsticks officiels">
+            <span class="st-ad-sparkle st-ad-sparkle-1" aria-hidden="true">✦</span>
+            <span class="st-ad-sparkle st-ad-sparkle-2" aria-hidden="true">✧</span>
+            <span class="st-ad-sparkle st-ad-sparkle-3" aria-hidden="true">✦</span>
+
             <div class="st-ad-header">
-              <span class="st-ad-badge">Publicité</span>
-              <span class="st-ad-partner">SEOUL LIGHT SHOP</span>
+              <span class="st-ad-badge">Sponsorisé</span>
+              <span class="st-ad-partner">LIGHTSTICKS</span>
+              <button type="button" id="st-ad-pause-btn" class="st-ad-pause-btn" aria-pressed="false" aria-label="Mettre en pause le défilement des lightsticks" title="Pause / Lecture">❚❚</button>
             </div>
 
-            <div class="st-ad-visual">
-              <img src="assets/images/lightstick-ocean-real.jpg" alt="Océan lumineux de lightsticks K-Pop officiels synchronisés en concert" loading="eager">
-              <span class="st-ad-promo" aria-label="Promotion moins 10 pour cent">-10% · OFFICIEL</span>
+            <!-- Panneau déroulant automatique par groupe -->
+            <div class="st-ad-carousel" id="st-ad-carousel" aria-roledescription="carrousel" aria-label="Sélection de lightsticks par groupe">
+              <div class="st-ad-track" id="st-ad-track">
+                <div class="st-ad-slide is-active" data-group="BLACKPINK">
+                  <div class="st-ad-visual">
+                    <img src="assets/images/lightsticks/blackpink.jpg" alt="BLACKPINK — Lightstick officiel BI-Ping-Bong Ver.2" loading="eager">
+                    <span class="st-ad-group-pill">BLACKPINK</span>
+                    <span class="st-ad-promo">-10% · OFFICIEL</span>
+                  </div>
+                  <div class="st-ad-slide-meta">
+                    <strong class="st-ad-slide-name">BI-Ping-Bong Ver.2</strong>
+                    <span class="st-ad-slide-price">54 €</span>
+                  </div>
+                  <p class="st-ad-slide-sub">Marteau cœur rose Bluetooth 5.0 · Édition Limited</p>
+                </div>
+
+                <div class="st-ad-slide" data-group="BTS">
+                  <div class="st-ad-visual">
+                    <img src="assets/images/lightsticks/bts.jpg" alt="BTS — Lightstick officiel ARMY Bomb Ver.4" loading="lazy">
+                    <span class="st-ad-group-pill">BTS</span>
+                    <span class="st-ad-promo">BEST-SELLER</span>
+                  </div>
+                  <div class="st-ad-slide-meta">
+                    <strong class="st-ad-slide-name">ARMY Bomb Ver.4</strong>
+                    <span class="st-ad-slide-price">59 €</span>
+                  </div>
+                  <p class="st-ad-slide-sub">Map of the Soul Special Edition · Sync Stade</p>
+                </div>
+
+                <div class="st-ad-slide" data-group="Stray Kids">
+                  <div class="st-ad-visual">
+                    <img src="assets/images/lightsticks/straykids.jpg" alt="Stray Kids — Lightstick officiel Nachimbong Ver.2" loading="lazy">
+                    <span class="st-ad-group-pill">STRAY KIDS</span>
+                    <span class="st-ad-promo">NOUVEAU</span>
+                  </div>
+                  <div class="st-ad-slide-meta">
+                    <strong class="st-ad-slide-name">Nachimbong Ver.2</strong>
+                    <span class="st-ad-slide-price">58 €</span>
+                  </div>
+                  <p class="st-ad-slide-sub">Boussole OLED interactive · Mode Concert JYP</p>
+                </div>
+
+                <div class="st-ad-slide" data-group="TWICE">
+                  <div class="st-ad-visual">
+                    <img src="assets/images/lightsticks/twice.jpg" alt="TWICE — Lightstick officiel Candybong Infinity" loading="lazy">
+                    <span class="st-ad-group-pill">TWICE</span>
+                    <span class="st-ad-promo">-10% · OFFICIEL</span>
+                  </div>
+                  <div class="st-ad-slide-meta">
+                    <strong class="st-ad-slide-name">Candybong ∞</strong>
+                    <span class="st-ad-slide-price">56 €</span>
+                  </div>
+                  <p class="st-ad-slide-sub">Miroir infini tactile + 9 couleurs membres</p>
+                </div>
+
+                <div class="st-ad-slide" data-group="NewJeans">
+                  <div class="st-ad-visual">
+                    <img src="assets/images/lightsticks/newjeans.jpg" alt="NewJeans — Lightstick officiel Binky Bong" loading="lazy">
+                    <span class="st-ad-group-pill">NEWJEANS</span>
+                    <span class="st-ad-promo">STOCK LIMITÉ</span>
+                  </div>
+                  <div class="st-ad-slide-meta">
+                    <strong class="st-ad-slide-name">Binky Bong</strong>
+                    <span class="st-ad-slide-price">52 €</span>
+                  </div>
+                  <p class="st-ad-slide-sub">Lapin Bunnies + stickers personnalisables inclus</p>
+                </div>
+              </div>
+
+              <div class="st-ad-progress" aria-hidden="true">
+                <div class="st-ad-progress-fill" id="st-ad-progress-fill"></div>
+              </div>
+
+              <div class="st-ad-dots" role="tablist" aria-label="Choisir un groupe de lightstick">
+                <button type="button" class="st-ad-dot is-active" data-ad-index="0" aria-label="Voir BLACKPINK">BP</button>
+                <button type="button" class="st-ad-dot" data-ad-index="1" aria-label="Voir BTS">BTS</button>
+                <button type="button" class="st-ad-dot" data-ad-index="2" aria-label="Voir Stray Kids">SKZ</button>
+                <button type="button" class="st-ad-dot" data-ad-index="3" aria-label="Voir TWICE">TW</button>
+                <button type="button" class="st-ad-dot" data-ad-index="4" aria-label="Voir NewJeans">NJ</button>
+              </div>
             </div>
 
             <div class="st-ad-body">
               <h2 class="st-ad-title">Achète ton Lightstick officiel</h2>
               <p class="st-ad-desc">
-                Modèles officiels Bluetooth 5.0 certifiés agences, livrés sous 48h en France.
+                Modèles certifiés agences, livrés sous 48h en France.
               </p>
 
-              <ul class="st-ad-list" aria-label="Sélection de lightsticks disponibles">
-                <li>
-                  <span class="st-ad-item-name">ARMY Bomb SE</span>
-                  <span class="st-ad-item-price">59 €</span>
-                </li>
-                <li>
-                  <span class="st-ad-item-name">BI-Ping-Bong v2</span>
-                  <span class="st-ad-item-price">54 €</span>
-                </li>
-                <li>
-                  <span class="st-ad-item-name">Nachimbong v2</span>
-                  <span class="st-ad-item-price">58 €</span>
-                </li>
-                <li>
-                  <span class="st-ad-item-name">Binky Bong</span>
-                  <span class="st-ad-item-price">52 €</span>
-                </li>
-              </ul>
-
-              <div class="st-ad-code" aria-label="Code promotionnel KPOPHUB10">
-                <span>CODE :</span>
-                <strong>KPOPHUB10</strong>
+              <div class="st-ad-code-stage" id="st-ad-code-stage">
+                <button type="button" id="st-ad-code-btn" class="st-ad-code-btn" aria-expanded="false" aria-label="Révéler le code promo moins 10 pour cent">
+                  <span class="st-ad-code-reveal" aria-live="polite">
+                    <span>CODE :</span>
+                    <strong>KPOPHUB10</strong>
+                    <span class="st-ad-code-copied" id="st-ad-code-copied" hidden>Copié ✓</span>
+                  </span>
+                  <span class="st-gift-wrap" aria-hidden="true">
+                    <span class="st-gift-half st-gift-left"></span>
+                    <span class="st-gift-half st-gift-right"></span>
+                    <span class="st-gift-ribbon-v"></span>
+                    <span class="st-gift-ribbon-h"></span>
+                    <span class="st-gift-label">🎁 Révéler le code -10%</span>
+                  </span>
+                </button>
               </div>
 
               <a href="lightsticks.html" class="st-btn st-btn-ad">
-                <span>Découvrir les lightsticks</span>
+                <span>Voir la boutique</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
             </div>
@@ -237,6 +312,74 @@
       </div>
     </section>
 
+    <!-- 1B. CATÉGORIE ÉPINGLÉE : DÉBAT HOT (MANON KATSEYE) -->
+    <section id="debat-hot" class="st-section st-hot-section" aria-labelledby="st-hot-h2">
+      <div class="st-container">
+        <div class="st-section-head" style="margin-bottom: 1.25rem;">
+          <div>
+            <div class="st-meta-strip" style="margin-bottom: 0.4rem;">
+              <span class="st-tag st-tag-hot"><span aria-hidden="true">🔥</span> ÉPINGLÉ · HOT</span>
+              <span>SUJET BRÛLANT DE LA SEMAINE</span>
+            </div>
+            <h2 id="st-hot-h2" class="st-section-h2">Débat HOT <span aria-hidden="true">🔥</span></h2>
+          </div>
+        </div>
+
+        <article class="st-hot-card" aria-labelledby="st-manon-hot-title">
+          <div class="st-zeri-peek">
+            <button type="button" class="st-zeri-btn" data-zeri-msg="QUOI ?! Manon en hiatus juste avant Coachella alors que c'était la n°1 du groupe ?! Tout le monde est choqué !" aria-label="Zeri la mascotte choquée">
+              <img src="assets/images/mascot/mascot-surprise.png?v=20261111h" alt="Zeri la mascotte choquée" class="st-zeri-img">
+            </button>
+          </div>
+
+          <div class="st-hot-media">
+            <img src="assets/images/manon-katseye-hot.jpg" alt="Portrait de Manon Bannerman, membre numéro 1 de KATSEYE" loading="eager">
+            <span class="st-hot-pin-badge">HOT · ÉPINGLÉ</span>
+          </div>
+
+          <div class="st-hot-body">
+            <div class="st-meta-strip">
+              <span class="st-tag st-tag-gold">Débat &amp; Actu</span>
+              <span>KATSEYE</span>
+              <span>3 MIN</span>
+              <span>3 réponses</span>
+            </div>
+
+            <h3 id="st-manon-hot-title" class="st-hot-title">
+              <a href="article.html?id=manon">Hiatus de Manon (KATSEYE) : comment le groupe gère l’absence de sa numéro 1 ?</a>
+            </h3>
+
+            <p class="st-hot-excerpt">
+              Annoncé par HYBE × Geffen en février 2026 « pour sa santé », le hiatus de Manon fait exploser les débats chez les EYEKONS. Difficile de combler l'absence de celle qui portait l'aura, la viralité et la popularité n°1 du groupe depuis <em>Pop Star Academy</em> — surtout face au décalage entre le communiqué du label et sa propre prise de parole.
+            </p>
+
+            <div class="st-hot-quote">
+              <div class="st-comment-top">
+                <span class="st-comment-who">
+                  <img src="assets/images/avatars/ines.jpg" alt="" class="st-comment-avatar" aria-hidden="true">
+                  <span>Inès_K</span>
+                  <span class="st-stance">Soutien Manon #1</span>
+                </span>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--st-ink-muted);">Il y a 2 h · 78 utiles</span>
+              </div>
+              <p>« Soyons honnêtes : Manon c'était littéralement la numéro 1 du groupe en charisme et en visibilité. Mettre en pause la membre qui ramène le plus de fans avant Coachella, c'est incompréhensible. »</p>
+            </div>
+
+            <div class="st-feature-footer">
+              <a href="article.html?id=manon" class="st-btn st-btn-primary">
+                <span>Ouvrir le débat complet (3 réponses)</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <button type="button" class="st-btn st-btn-ghost st-save-btn" data-bookmark-id="article-manon" data-bookmark-title="Hiatus de Manon (KATSEYE) : l'absence de la numéro 1" aria-pressed="false">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+                <span class="st-save-label">Sauvegarder</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- 2. ARTICLES, FACTS & APERÇU DES RÉACTIONS (MAX 2 COMMENTAIRES PAR SUJET) -->
     <section id="debats-live" class="st-section" aria-labelledby="st-debats-h2">
       <div class="st-container">
@@ -270,7 +413,7 @@
         <div class="st-lookbook-grid">
           <article class="st-look-card" data-category="3g">
             <div class="st-look-media">
-              <img src="assets/images/bts-real.jpg" alt="Photographie officielle des sept membres de BTS" loading="lazy">
+              <img src="assets/images/bts-real.jpg?v=20261125l" alt="Photographie de BTS sur scène lors du concert Love Yourself" loading="lazy">
               <span class="st-gen-stamp">3G</span>
             </div>
             <div class="st-look-body">
@@ -458,7 +601,7 @@
     </div>
   </footer>
 
-  <script src="articles-data.js?v=20261121k"></script>
-  <script src="studio.js?v=20261121l"></script>
+  <script src="articles-data.js?v=20261125h"></script>
+  <script src="studio.js?v=20261125k"></script>
 </body>
 </html>

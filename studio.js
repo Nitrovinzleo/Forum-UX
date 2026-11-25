@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (feedEl && window.KPOP_ARTICLES) {
     const stored = getComments();
-    const articles = Object.values(window.KPOP_ARTICLES);
+    const articles = Object.values(window.KPOP_ARTICLES).filter((a) => a.id !== 'manon');
     feedEl.innerHTML = articles.map((a) => {
       const userForArticle = stored.filter((c) => c.articleId === a.id);
       const allComments = [...a.comments, ...userForArticle];
@@ -303,4 +303,116 @@ document.addEventListener('DOMContentLoaded', () => {
       closeZeriBubble();
     }
   });
+
+  // 10. Panneau publicitaire déroulant automatique toutes les 3 s (BLACKPINK, BTS, Stray Kids, TWICE, NewJeans)
+  const adCarousel = document.getElementById('st-ad-carousel');
+  if (adCarousel) {
+    const track = document.getElementById('st-ad-track');
+    const slides = Array.from(adCarousel.querySelectorAll('.st-ad-slide'));
+    const dots = Array.from(adCarousel.querySelectorAll('.st-ad-dot'));
+    const progressFill = document.getElementById('st-ad-progress-fill');
+    const pauseBtn = document.getElementById('st-ad-pause-btn');
+    const DURATION = 3000;
+    let current = 0;
+    let paused = false;
+    let hovered = false;
+    let timer = null;
+
+    function restartProgress() {
+      if (!progressFill) return;
+      progressFill.style.transition = 'none';
+      progressFill.style.width = '0%';
+      void progressFill.offsetWidth;
+      if (!paused && !hovered) {
+        progressFill.style.transition = `width ${DURATION}ms linear`;
+        progressFill.style.width = '100%';
+      }
+    }
+
+    function showSlide(index) {
+      current = (index + slides.length) % slides.length;
+      if (track) {
+        track.style.transform = `translateX(-${current * 100}%)`;
+      }
+      slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
+      dots.forEach((d, i) => {
+        d.classList.toggle('is-active', i === current);
+        d.setAttribute('aria-selected', String(i === current));
+      });
+      restartProgress();
+    }
+
+    function startTimer() {
+      clearInterval(timer);
+      if (paused || hovered) return;
+      restartProgress();
+      timer = setInterval(() => showSlide(current + 1), DURATION);
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        showSlide(Number(dot.dataset.adIndex || 0));
+        startTimer();
+      });
+    });
+
+    if (pauseBtn) {
+      if (paused) {
+        pauseBtn.textContent = '▶';
+        pauseBtn.setAttribute('aria-pressed', 'true');
+      }
+      pauseBtn.addEventListener('click', () => {
+        paused = !paused;
+        pauseBtn.textContent = paused ? '▶' : '❚❚';
+        pauseBtn.setAttribute('aria-pressed', String(paused));
+        if (paused) {
+          clearInterval(timer);
+          if (progressFill) {
+            progressFill.style.transition = 'none';
+            progressFill.style.width = '0%';
+          }
+        } else {
+          startTimer();
+        }
+      });
+    }
+
+    adCarousel.addEventListener('mouseenter', () => {
+      hovered = true;
+      clearInterval(timer);
+      if (progressFill) {
+        progressFill.style.transition = 'none';
+        progressFill.style.width = '0%';
+      }
+    });
+    adCarousel.addEventListener('mouseleave', () => {
+      hovered = false;
+      startTimer();
+    });
+
+    showSlide(0);
+    startTimer();
+  }
+
+  // 11. Code promo masqué sous papier cadeau qui tombe au clic
+  const codeBtn = document.getElementById('st-ad-code-btn');
+  const copiedBadge = document.getElementById('st-ad-code-copied');
+  if (codeBtn) {
+    codeBtn.addEventListener('click', () => {
+      const alreadyOpen = codeBtn.classList.contains('is-revealed');
+      if (!alreadyOpen) {
+        codeBtn.classList.add('is-revealed');
+        codeBtn.setAttribute('aria-expanded', 'true');
+        codeBtn.setAttribute('aria-label', 'Code promo KPOPHUB10 révélé, cliquer pour copier');
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText('KPOPHUB10').then(() => {
+          if (copiedBadge) {
+            copiedBadge.hidden = false;
+            setTimeout(() => { copiedBadge.hidden = true; }, 2200);
+          }
+        }).catch(() => {});
+      }
+    });
+  }
 });

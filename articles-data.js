@@ -113,6 +113,54 @@ window.KPOP_ARTICLES = {
     ]
   },
 
+  manon: {
+    id: 'manon',
+    tag: 'Débat & Actu',
+    tagGold: true,
+    readTime: '3 min',
+    published: 'Il y a 3 h',
+    title: 'Hiatus de Manon (KATSEYE) : comment le groupe gère l’absence de sa numéro 1 ?',
+    summary: "Annoncé par HYBE × Geffen en février 2026 « pour sa santé », le hiatus de Manon fait exploser les débats chez les EYEKONS : difficile de remplacer celle qui portait l'aura et la viralité n°1 du groupe.",
+    mediaType: 'image',
+    imageSrc: 'assets/images/manon-katseye.jpg?v=20261125j',
+    mediaAlt: 'Portrait de Manon Bannerman (KATSEYE)',
+    paragraphs: [
+      "Depuis The Debut: Dream Academy et la série Netflix Pop Star Academy, Manon Bannerman s'était imposée sans discussion comme la numéro 1 de KATSEYE auprès du grand public : la plus virale sur TikTok, la plus suivie sur les réseaux, et l'aimant visuel qui faisait découvrir le groupe à des millions de personnes hors de la bulle K-Pop.",
+      "C'est pour ça que l'annonce de HYBE × Geffen en février 2026 — évoquant un hiatus temporaire « pour se concentrer sur sa santé et son bien-être » — a provoqué un séisme chez les EYEKONS. D'autant plus que Manon a rapidement pris la parole pour rassurer ses fans en affirmant aller bien, tout en glissant cette phrase qui a mis le feu aux poudres : « Parfois les choses se déroulent d'une manière qu'on ne contrôle pas totalement. »",
+      "Avec son absence sur des rendez-vous majeurs comme Coachella et un décalage évident entre le communiqué officiel du label et le ton de Manon, la communauté se divise : pause nécessaire face à la pression du système HYBE ou mauvaise gestion de la star n°1 du groupe ? En attendant son retour, impossible d'ignorer le vide laissé sur scène."
+    ],
+    links: [
+      { label: 'KATSEYE — Touch (Clip officiel)', url: 'https://www.youtube.com/watch?v=l9CZykYZkOQ' }
+    ],
+    stances: ['Soutien Manon #1', 'Critique HYBE × Geffen', 'Team OT6'],
+    comments: [
+      {
+        author: 'Inès_K',
+        avatar: 'assets/images/avatars/ines.jpg',
+        stance: 'Soutien Manon #1',
+        time: 'Il y a 2 h',
+        votes: 78,
+        message: "Soyons honnêtes : Manon c'était littéralement la numéro 1 du groupe en charisme et en visibilité. Mettre en pause la membre qui ramène le plus de fans avant Coachella, c'est incompréhensible."
+      },
+      {
+        author: 'Yasmine_Danse',
+        avatar: 'assets/images/avatars/yasmine.jpg',
+        stance: 'Critique HYBE × Geffen',
+        time: 'Il y a 1 h',
+        votes: 52,
+        message: "Le label parle de « santé » sur Weverse et le lendemain elle dit qu'elle va très bien mais qu'elle ne contrôle pas tout… La com' de HYBE × Geffen est catastrophique sur ce dossier."
+      },
+      {
+        author: 'Chloé_Bunnies',
+        avatar: 'assets/images/avatars/chloe.jpg',
+        stance: 'Team OT6',
+        time: 'Il y a 28 min',
+        votes: 34,
+        message: "Les cinq autres assurent en live, mais KATSEYE sans Manon ce n'est juste pas la même énergie. On espère vraiment un retour complet en OT6."
+      }
+    ]
+  },
+
   bridge: {
     id: 'bridge',
     tag: 'Fact Musique',
